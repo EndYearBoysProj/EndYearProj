@@ -63,6 +63,16 @@ namespace DAL
             dbConn.Close();
             return dt;
 
+        } public int InsertProperty(Properties prop)
+        {
+            if(dbConn.State == ConnectionState.Closed)
+            {
+                dbConn.Open();
+            }
+            dbComm = new SqlCommand("sp_InsertProperties", dbConn);
+            dbComm.CommandType= CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@Description",)
         }
 
 
