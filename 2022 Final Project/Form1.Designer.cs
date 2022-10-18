@@ -39,19 +39,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(229, 53);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Navy;
+            this.label1.Location = new System.Drawing.Point(215, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(353, 35);
+            this.label1.Size = new System.Drawing.Size(391, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to Property Central";
             // 
             // btnAdmin
             // 
-            this.btnAdmin.Location = new System.Drawing.Point(309, 130);
+            this.btnAdmin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmin.Location = new System.Drawing.Point(314, 181);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(180, 50);
+            this.btnAdmin.Size = new System.Drawing.Size(180, 61);
             this.btnAdmin.TabIndex = 1;
             this.btnAdmin.Text = "Admin";
             this.btnAdmin.UseVisualStyleBackColor = true;
@@ -59,18 +60,20 @@
             // 
             // btnAgent
             // 
-            this.btnAgent.Location = new System.Drawing.Point(309, 211);
+            this.btnAgent.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgent.Location = new System.Drawing.Point(314, 266);
             this.btnAgent.Name = "btnAgent";
-            this.btnAgent.Size = new System.Drawing.Size(180, 50);
+            this.btnAgent.Size = new System.Drawing.Size(180, 61);
             this.btnAgent.TabIndex = 2;
             this.btnAgent.Text = "Agent";
             this.btnAgent.UseVisualStyleBackColor = true;
             // 
             // btnTenant
             // 
-            this.btnTenant.Location = new System.Drawing.Point(309, 294);
+            this.btnTenant.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTenant.Location = new System.Drawing.Point(314, 355);
             this.btnTenant.Name = "btnTenant";
-            this.btnTenant.Size = new System.Drawing.Size(180, 50);
+            this.btnTenant.Size = new System.Drawing.Size(180, 61);
             this.btnTenant.TabIndex = 3;
             this.btnTenant.Text = "Tenant";
             this.btnTenant.UseVisualStyleBackColor = true;
@@ -79,22 +82,23 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Yellow;
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(-2, -3);
+            this.groupBox1.Location = new System.Drawing.Point(-3, -3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(806, 127);
+            this.groupBox1.Size = new System.Drawing.Size(805, 134);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 485);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnTenant);
             this.Controls.Add(this.btnAgent);
             this.Controls.Add(this.btnAdmin);
+            this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);

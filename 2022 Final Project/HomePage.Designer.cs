@@ -32,7 +32,7 @@
             this.btnProperty = new System.Windows.Forms.Button();
             this.btnPropertyType = new System.Windows.Forms.Button();
             this.btnProvince = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnSuburb = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -40,9 +40,9 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(178, 34);
+            this.groupBox1.Location = new System.Drawing.Point(223, 45);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(610, 404);
+            this.groupBox1.Size = new System.Drawing.Size(544, 340);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -50,9 +50,10 @@
             // 
             this.btnProperty.BackColor = System.Drawing.Color.Yellow;
             this.btnProperty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProperty.Location = new System.Drawing.Point(21, 34);
+            this.btnProperty.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProperty.Location = new System.Drawing.Point(27, 45);
             this.btnProperty.Name = "btnProperty";
-            this.btnProperty.Size = new System.Drawing.Size(140, 30);
+            this.btnProperty.Size = new System.Drawing.Size(175, 39);
             this.btnProperty.TabIndex = 0;
             this.btnProperty.Text = "Property";
             this.btnProperty.UseVisualStyleBackColor = false;
@@ -62,9 +63,10 @@
             // 
             this.btnPropertyType.BackColor = System.Drawing.Color.Yellow;
             this.btnPropertyType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPropertyType.Location = new System.Drawing.Point(21, 92);
+            this.btnPropertyType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPropertyType.Location = new System.Drawing.Point(27, 121);
             this.btnPropertyType.Name = "btnPropertyType";
-            this.btnPropertyType.Size = new System.Drawing.Size(140, 30);
+            this.btnPropertyType.Size = new System.Drawing.Size(175, 39);
             this.btnPropertyType.TabIndex = 1;
             this.btnPropertyType.Text = "Property Type";
             this.btnPropertyType.UseVisualStyleBackColor = false;
@@ -74,31 +76,33 @@
             // 
             this.btnProvince.BackColor = System.Drawing.Color.Yellow;
             this.btnProvince.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProvince.Location = new System.Drawing.Point(21, 150);
+            this.btnProvince.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProvince.Location = new System.Drawing.Point(27, 197);
             this.btnProvince.Name = "btnProvince";
-            this.btnProvince.Size = new System.Drawing.Size(140, 30);
+            this.btnProvince.Size = new System.Drawing.Size(175, 39);
             this.btnProvince.TabIndex = 2;
             this.btnProvince.Text = "Province";
             this.btnProvince.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnSuburb
             // 
-            this.button4.BackColor = System.Drawing.Color.Yellow;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(21, 206);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 30);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnSuburb.BackColor = System.Drawing.Color.Yellow;
+            this.btnSuburb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuburb.Location = new System.Drawing.Point(27, 270);
+            this.btnSuburb.Name = "btnSuburb";
+            this.btnSuburb.Size = new System.Drawing.Size(175, 39);
+            this.btnSuburb.TabIndex = 3;
+            this.btnSuburb.Text = "Suburb";
+            this.btnSuburb.UseVisualStyleBackColor = false;
             // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Yellow;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(21, 263);
+            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(27, 346);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(140, 30);
+            this.btnBack.Size = new System.Drawing.Size(175, 39);
             this.btnBack.TabIndex = 4;
             this.btnBack.Text = "Back to Login";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -106,16 +110,17 @@
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(807, 415);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnSuburb);
             this.Controls.Add(this.btnProperty);
             this.Controls.Add(this.btnProvince);
             this.Controls.Add(this.btnPropertyType);
+            this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "HomePage";
             this.Text = "HomePage";
             this.ResumeLayout(false);
@@ -128,7 +133,7 @@
         private System.Windows.Forms.Button btnProperty;
         private System.Windows.Forms.Button btnPropertyType;
         private System.Windows.Forms.Button btnProvince;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSuburb;
         private System.Windows.Forms.Button btnBack;
     }
 }

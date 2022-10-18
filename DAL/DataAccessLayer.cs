@@ -63,7 +63,8 @@ namespace DAL
             dbConn.Close();
             return dt;
 
-        } public int InsertProperty(PropertiesD prop)
+        } 
+        public int InsertProperty(PropertiesD prop)
         {
             if(dbConn.State == ConnectionState.Closed)
             {
@@ -139,6 +140,224 @@ namespace DAL
             return dt;
 
 
+        }
+        public int InsertCity(City city)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch
+            {
+
+            }
+            dbComm = new SqlCommand("sp_InsertCity", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+
+            dbComm.Parameters.AddWithValue("@CityDescription", city.CityDescription);
+            dbComm.Parameters.AddWithValue("@ProvinceID", city.ProvinceID);
+
+            int i = dbComm.ExecuteNonQuery();
+            dbConn.Close();
+            return i;
+
+        }
+
+        public DataTable GetCity()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch
+            {
+
+            }
+            dbComm = new SqlCommand("sp_GetCity", dbConn);
+            dt = new DataTable();
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dbAdapter.Fill(dt);
+            return dt;
+
+        }
+        public int InsertSuburb(Suburb suburb)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch
+            {
+
+            }
+            dbComm = new SqlCommand("sp_InsertSuburb", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@SuburbID", suburb.SuburbID);
+            dbComm.Parameters.AddWithValue("@SuburbDescription", suburb.SuburbDescription);
+            dbComm.Parameters.AddWithValue("@PostalCode", suburb.PostalCode);
+            dbComm.Parameters.AddWithValue("@CityID", suburb.CityID);
+
+            int x = dbComm.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+        }
+        public DataTable GetSuburb()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch
+            {
+
+            }
+            dbComm = new SqlCommand("sp_GetSurburb", dbConn);
+            dt = new DataTable();
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dbAdapter.Fill(dt);
+            return dt;
+        }
+        public int InsertAgency(Agency agency)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch
+            {
+
+            }
+            dbComm = new SqlCommand("sp_InsertAgency", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@AgencyID", agency.AgencyID);
+            dbComm.Parameters.AddWithValue("@AgencyName", agency.AgencyName);
+            dbComm.Parameters.AddWithValue("@SuburbID", agency.SuburbID);
+
+
+            int x = dbComm.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+
+        }
+        public DataTable GetAgency()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch
+            {
+
+            }
+            dbComm = new SqlCommand("sp_GetAgency", dbConn);
+            dt = new DataTable();
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dbAdapter.Fill(dt);
+            return dt;
+        }
+        public int DeleteAgency(Agency agency)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch
+            {
+
+            }
+            dbComm = new SqlCommand("sp_DeleteAgency", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@AgencyID", agency.AgencyID);
+            dbComm.Parameters.AddWithValue("@AgencyName", agency.AgencyName);
+            dbComm.Parameters.AddWithValue("@SuburbID", agency.SuburbID);
+
+
+            int x = dbComm.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+        }
+        public int InsertAgent(Agent agent)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch
+            {
+
+            }
+            dbComm = new SqlCommand("sp_InsertAgent", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@AgentID", agent.AgentID);
+            dbComm.Parameters.AddWithValue("@Name", agent.Name);
+            dbComm.Parameters.AddWithValue("@Surname", agent.Surname);
+            dbComm.Parameters.AddWithValue("@Email", agent.Email);
+            dbComm.Parameters.AddWithValue("@Password", agent.Password);
+            dbComm.Parameters.AddWithValue("@Status", agent.Status);
+            dbComm.Parameters.AddWithValue("@AgencyID", agent.AgencyID);
+
+            int x = dbComm.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+        }
+        public DataTable GetAgent()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch
+            {
+
+            }
+            dbComm = new SqlCommand("sp_GetAgent", dbConn);
+            dt = new DataTable();
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dbAdapter.Fill(dt);
+            return dt;
+        }
+        public int UpdateAgent(int AgentID, string Email, int Phone, string Status)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch
+            {
+
+            }
+            dbComm = new SqlCommand("sp_UpdateAgent", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@AgentID", AgentID);
+            dbComm.Parameters.AddWithValue("@Email", Email);
+            dbComm.Parameters.AddWithValue("@Phone", Phone);
+            dbComm.Parameters.AddWithValue("@Status", Status);
+
+            int x = dbComm.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+        }
+        public DataTable GetArea()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch
+            {
+
+            }
+            dbComm = new SqlCommand("sp_GetArea", dbConn);
+            dt = new DataTable();
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dbAdapter.Fill(dt);
+            return dt;
         }
 
 

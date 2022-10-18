@@ -40,5 +40,50 @@ namespace BLL
         {
             return dal.DisplayProperty();
         }
+        public int InsertCity(City city)
+        {
+            return dal.InsertCity(city);
+        }
+        public DataTable GetCity()
+        {
+            return dal.GetCity();
+        }
+        public int InsertSuburb(Suburb suburb)
+        {
+            return dal.InsertSuburb(suburb);
+        }
+        public DataTable GetSuburb()
+        {
+            return dal.GetSuburb();
+        }
+        public int InsertAgency(Agency agency)
+        {
+            return dal.InsertAgency(agency);
+        }
+        public DataTable GetAgency()
+        {
+            return dal.GetAgency();
+        }
+        public int DeleteAgency(Agency agency)
+        {
+            return dal.DeleteAgency(agency);
+        }
+        public int UpdateAgent(int AgentID, string Email, int Phone, string Status)
+        {
+            return dal.UpdateAgent(AgentID, Email, Phone, Status);
+        }
+        public int InsertAgent(Agent agent)
+        {
+            return dal.InsertAgent(agent);
+        }
+        public DataTable GetAgent()
+        {
+            return dal.GetAgent();
+        }
+        public DataTable GetArea()
+        {
+            return dal.GetArea();
+        }
+
     }
 }
