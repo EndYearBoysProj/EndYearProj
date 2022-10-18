@@ -8,7 +8,9 @@ namespace DAL
 {
     public class PropertiesD
     {
-         PropertiesD prop = new PropertiesD();
+        
+         
+    
 
         public int PropertyID { get; set; }
         public string Description { get; set; }

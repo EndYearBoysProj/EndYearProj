@@ -12,9 +12,9 @@ using DAL;
 
 namespace _2022_Final_Project
 {
-    public partial class Form2 : Form
+    public partial class PropertyTypefrm : Form
     {
-        public Form2()
+        public PropertyTypefrm()
         {
             InitializeComponent();
         }
@@ -42,6 +42,17 @@ namespace _2022_Final_Project
             dgvType.DataSource = bll.DisplayPropertyType();
 
         }
-    
+
+        private void PropertyTypefrm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            HomePage hm = new HomePage();
+            hm.Show();
+            this.Hide();
+        }
     }
 }

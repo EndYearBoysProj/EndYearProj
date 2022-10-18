@@ -29,8 +29,8 @@ namespace _2022_Final_Project
             prop.Price = double.Parse(txtPrice.Text);
             prop.image = txtImage.Text;
             prop.PropertyTypeID = int.Parse(txtPropertyTypeID.Text);
-            prop.Status= txtStatus.Text;
-            prop.SuburbID = int.Parse(txtSuburbsID.Text);
+            prop.Status= cmbStatus.Text;
+            prop.SuburbID = int.Parse(cmbSuburbsID.Text);
 
             int x = bll.InsertProperty(prop);
             if(x>0)
@@ -45,7 +45,7 @@ namespace _2022_Final_Project
 
             p.PropertyTypeID = int.Parse(txtPropertyTypeID.Text);
             p.Price = double.Parse(txtPrice.Text);
-            p.Status = txtStatus.Text;
+            p.Status = cmbStatus.Text;
             p.PropertyID = int.Parse(txtPropertyID.Text);
 
             int x = bll.UpdateProperty(p);
@@ -58,11 +58,11 @@ namespace _2022_Final_Project
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            PropertiesD p = new PropertiesD();
+            PropertiesD d = new PropertiesD();
 
-            p.PropertyID= int.Parse(txtPropertyID.Text);
+            d.PropertyID= int.Parse(txtPropertyID.Text);
 
-            int x = bll.DeleteProperty(p);
+            int x = bll.DeleteProperty(d);
             if (x>0)
             {
                 MessageBox.Show("Your information has been deleted");
@@ -79,7 +79,20 @@ namespace _2022_Final_Project
         {
             HomePage hm = new HomePage();
             hm.Show();
-            this.Hide();
+            this.Close();
         }
+
+        private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void PropertyFrm_Load(object sender, EventArgs e)
+        {
+
+        }
+        
+        
+          
+        
     }
 }

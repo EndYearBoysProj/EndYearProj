@@ -21,14 +21,14 @@ namespace _2022_Final_Project
         {
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnPropertyType_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            PropertyTypefrm form2 = new PropertyTypefrm();
             form2.Show();
-            this.Hide();
+            this.Close();
            
         }
 

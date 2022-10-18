@@ -1,6 +1,6 @@
 ﻿namespace _2022_Final_Project
 {
-    partial class Form2
+    partial class PropertyTypefrm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,17 +35,20 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvType)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddType
             // 
+            this.btnAddType.BackColor = System.Drawing.Color.Yellow;
+            this.btnAddType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddType.Location = new System.Drawing.Point(279, 235);
             this.btnAddType.Name = "btnAddType";
             this.btnAddType.Size = new System.Drawing.Size(120, 30);
             this.btnAddType.TabIndex = 0;
             this.btnAddType.Text = "Add";
-            this.btnAddType.UseVisualStyleBackColor = true;
+            this.btnAddType.UseVisualStyleBackColor = false;
             this.btnAddType.Click += new System.EventHandler(this.btnAddType_Click);
             // 
             // dgvType
@@ -67,12 +70,14 @@
             // 
             // btnDisplay
             // 
+            this.btnDisplay.BackColor = System.Drawing.Color.Yellow;
+            this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDisplay.Location = new System.Drawing.Point(419, 235);
             this.btnDisplay.Name = "btnDisplay";
             this.btnDisplay.Size = new System.Drawing.Size(120, 30);
             this.btnDisplay.TabIndex = 3;
             this.btnDisplay.Text = "Display";
-            this.btnDisplay.UseVisualStyleBackColor = true;
+            this.btnDisplay.UseVisualStyleBackColor = false;
             this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
             // txtID
@@ -87,6 +92,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(39, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(172, 28);
@@ -97,17 +103,32 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(39, 139);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(210, 28);
             this.label2.TabIndex = 6;
             this.label2.Text = "Property Description:";
             // 
-            // Form2
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Yellow;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(143, 235);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(120, 30);
+            this.btnBack.TabIndex = 7;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // PropertyTypefrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(612, 450);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtID);
@@ -115,8 +136,9 @@
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.dgvType);
             this.Controls.Add(this.btnAddType);
-            this.Name = "Form2";
+            this.Name = "PropertyTypefrm";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.PropertyTypefrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvType)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,5 +154,6 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnBack;
     }
 }

@@ -28,13 +28,13 @@ namespace BLL
         {
             return dal.InsertProperty(prop);
         }
-        public int UpdateProperty(PropertiesD prop)
+        public int UpdateProperty(PropertiesD p)
         {
-            return dal.UpdateProperty(prop);
+            return dal.UpdateProperty(p);
         }
-        public int DeleteProperty(PropertiesD prop)
+        public int DeleteProperty(PropertiesD d)
         {
-            return dal.DeleteProperty(prop);
+            return dal.DeleteProperty(d);
         }
         public DataTable DisplayProperty()
         {

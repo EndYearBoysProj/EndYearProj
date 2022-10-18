@@ -37,8 +37,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtPropertyID = new System.Windows.Forms.TextBox();
-            this.txtSuburbsID = new System.Windows.Forms.TextBox();
-            this.txtStatus = new System.Windows.Forms.TextBox();
             this.txtPropertyTypeID = new System.Windows.Forms.TextBox();
             this.txtImage = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
@@ -48,6 +46,8 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnDisplay = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.cmbSuburbsID = new System.Windows.Forms.ComboBox();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProperty)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,20 +146,6 @@
             this.txtPropertyID.Size = new System.Drawing.Size(350, 22);
             this.txtPropertyID.TabIndex = 8;
             // 
-            // txtSuburbsID
-            // 
-            this.txtSuburbsID.Location = new System.Drawing.Point(438, 203);
-            this.txtSuburbsID.Name = "txtSuburbsID";
-            this.txtSuburbsID.Size = new System.Drawing.Size(350, 22);
-            this.txtSuburbsID.TabIndex = 10;
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Location = new System.Drawing.Point(438, 175);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(350, 22);
-            this.txtStatus.TabIndex = 11;
-            // 
             // txtPropertyTypeID
             // 
             this.txtPropertyTypeID.Location = new System.Drawing.Point(438, 147);
@@ -248,12 +234,31 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // cmbSuburbsID
+            // 
+            this.cmbSuburbsID.FormattingEnabled = true;
+            this.cmbSuburbsID.Location = new System.Drawing.Point(438, 204);
+            this.cmbSuburbsID.Name = "cmbSuburbsID";
+            this.cmbSuburbsID.Size = new System.Drawing.Size(350, 24);
+            this.cmbSuburbsID.TabIndex = 21;
+            // 
+            // cmbStatus
+            // 
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Location = new System.Drawing.Point(438, 175);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(350, 24);
+            this.cmbStatus.TabIndex = 22;
+            this.cmbStatus.SelectedIndexChanged += new System.EventHandler(this.cmbStatus_SelectedIndexChanged);
+            // 
             // PropertyFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbStatus);
+            this.Controls.Add(this.cmbSuburbsID);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnDisplay);
             this.Controls.Add(this.btnDelete);
@@ -263,8 +268,6 @@
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtImage);
             this.Controls.Add(this.txtPropertyTypeID);
-            this.Controls.Add(this.txtStatus);
-            this.Controls.Add(this.txtSuburbsID);
             this.Controls.Add(this.txtPropertyID);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -276,6 +279,7 @@
             this.Controls.Add(this.dgvProperty);
             this.Name = "PropertyFrm";
             this.Text = "PropertyFrm";
+            this.Load += new System.EventHandler(this.PropertyFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProperty)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -293,8 +297,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtPropertyID;
-        private System.Windows.Forms.TextBox txtSuburbsID;
-        private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.TextBox txtPropertyTypeID;
         private System.Windows.Forms.TextBox txtImage;
         private System.Windows.Forms.TextBox txtPrice;
@@ -304,5 +306,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDisplay;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ComboBox cmbSuburbsID;
+        private System.Windows.Forms.ComboBox cmbStatus;
     }
 }

@@ -77,7 +77,7 @@ namespace DAL
             dbComm.Parameters.AddWithValue("@Image", prop.image);
             dbComm.Parameters.AddWithValue("@PropertyTypeID", prop.PropertyTypeID);
             dbComm.Parameters.AddWithValue("@Status", prop.Status);
-            dbComm.Parameters.AddWithValue("@SUburbsID", prop.SuburbID);
+            dbComm.Parameters.AddWithValue("@SuburbsID", prop.SuburbID);
 
             int x = dbComm.ExecuteNonQuery();
             dbConn.Close();
@@ -86,8 +86,9 @@ namespace DAL
 
         }
 
-        public int UpdateProperty(PropertiesD prop)
+        public int UpdateProperty(PropertiesD p)
         {
+           
             if (dbConn.State == ConnectionState.Closed)
             {
                 dbConn.Open();
@@ -97,17 +98,18 @@ namespace DAL
             dbComm = new SqlCommand(sql, dbConn);
             dbComm.CommandType = CommandType.StoredProcedure;
 
-            dbComm.Parameters.AddWithValue("@PropertyTypeID", prop.PropertyTypeID);
-            dbComm.Parameters.AddWithValue("@Price", prop.Price.ToString());
-            dbComm.Parameters.AddWithValue("@Status", prop.Status);
-            dbComm.Parameters.AddWithValue("@PropertyID", prop.PropertyID);
+            dbComm.Parameters.AddWithValue("@PropertyTypeID", p.PropertyTypeID);
+            dbComm.Parameters.AddWithValue("@Price", p.Price.ToString());
+            dbComm.Parameters.AddWithValue("@Status", p.Status);
+            dbComm.Parameters.AddWithValue("@PropertyID", p.PropertyID);
 
             int x =dbComm.ExecuteNonQuery();
             dbConn.Close();
             return x;
         }
-        public int DeleteProperty(PropertiesD prop)
+        public int DeleteProperty(PropertiesD d)
         {
+            
             if(dbConn.State == ConnectionState.Closed)
             {
                 dbConn.Open();
@@ -116,7 +118,7 @@ namespace DAL
             dbComm=new SqlCommand(sql, dbConn);
             dbComm.CommandType=CommandType.StoredProcedure;
 
-            dbComm.Parameters.AddWithValue("@PropertyID", prop.PropertyID);
+            dbComm.Parameters.AddWithValue("@PropertyID", d.PropertyID);
 
             int x =dbComm.ExecuteNonQuery();
             dbConn.Close();
