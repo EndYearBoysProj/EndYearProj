@@ -28,7 +28,15 @@ namespace _2022_Final_Project
         {
             Form2 form2 = new Form2();
             form2.Show();
+            this.Hide();
            
+        }
+
+        private void btnProperty_Click(object sender, EventArgs e)
+        {
+            PropertyFrm frm = new PropertyFrm();
+            frm.Show();
+            this.Hide();
         }
     }
 }

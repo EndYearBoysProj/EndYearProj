@@ -63,7 +63,7 @@ namespace DAL
             dbConn.Close();
             return dt;
 
-        } public int InsertProperty(Properties prop)
+        } public int InsertProperty(PropertiesD prop)
         {
             if(dbConn.State == ConnectionState.Closed)
             {
@@ -86,7 +86,7 @@ namespace DAL
 
         }
 
-        public int UpdateProperty(Properties prop)
+        public int UpdateProperty(PropertiesD prop)
         {
             if (dbConn.State == ConnectionState.Closed)
             {
@@ -106,7 +106,7 @@ namespace DAL
             dbConn.Close();
             return x;
         }
-        public int DeleteProperty(Properties prop)
+        public int DeleteProperty(PropertiesD prop)
         {
             if(dbConn.State == ConnectionState.Closed)
             {

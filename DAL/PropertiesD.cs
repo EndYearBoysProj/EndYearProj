@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class Properties
+    public class PropertiesD
     {
-        Properties prop = new Properties();
+         PropertiesD prop = new PropertiesD();
 
         public int PropertyID { get; set; }
         public string Description { get; set; }
@@ -17,5 +17,8 @@ namespace DAL
         public int PropertyTypeID { get; set; }
         public string Status { get; set; }
         public int SuburbID { get; set; }
+
+        
+        
     }
 }

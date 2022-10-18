@@ -24,15 +24,15 @@ namespace BLL
         {
             return dal.DisplayPropertyType();
         }
-        public int InsertProperty(Properties prop)
+        public int InsertProperty(PropertiesD prop)
         {
             return dal.InsertProperty(prop);
         }
-        public int UpdateProperty(Properties prop)
+        public int UpdateProperty(PropertiesD prop)
         {
             return dal.UpdateProperty(prop);
         }
-        public int DeleteProperty(Properties prop)
+        public int DeleteProperty(PropertiesD prop)
         {
             return dal.DeleteProperty(prop);
         }

@@ -22,21 +22,64 @@ namespace _2022_Final_Project
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
-            Properties prop = new Properties();
+
+            PropertiesD prop=new PropertiesD();   
 
             prop.Description = txtDescription.Text;
             prop.Price = double.Parse(txtPrice.Text);
-            prop.Image = txtImage.Text;
+            prop.image = txtImage.Text;
             prop.PropertyTypeID = int.Parse(txtPropertyTypeID.Text);
             prop.Status= txtStatus.Text;
-            prop.SuburbsID = int.Parse(txtSuburbsID.Text);
+            prop.SuburbID = int.Parse(txtSuburbsID.Text);
 
             int x = bll.InsertProperty(prop);
             if(x>0)
             {
                 MessageBox.Show("Your information has been added !");
             }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            PropertiesD p=new PropertiesD();
+
+            p.PropertyTypeID = int.Parse(txtPropertyTypeID.Text);
+            p.Price = double.Parse(txtPrice.Text);
+            p.Status = txtStatus.Text;
+            p.PropertyID = int.Parse(txtPropertyID.Text);
+
+            int x = bll.UpdateProperty(p);
+                if(x>0)
+            {
+                MessageBox.Show("You have updated your information");
+            }
+            
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            PropertiesD p = new PropertiesD();
+
+            p.PropertyID= int.Parse(txtPropertyID.Text);
+
+            int x = bll.DeleteProperty(p);
+            if (x>0)
+            {
+                MessageBox.Show("Your information has been deleted");
+            }
+
+        }
+
+        private void btnDisplay_Click(object sender, EventArgs e)
+        {
+            dgvProperty.DataSource = bll.DisplayProperty();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            HomePage hm = new HomePage();
+            hm.Show();
+            this.Hide();
         }
     }
 }

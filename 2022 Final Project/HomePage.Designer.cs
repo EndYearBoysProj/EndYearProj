@@ -56,6 +56,7 @@
             this.btnProperty.TabIndex = 0;
             this.btnProperty.Text = "Property";
             this.btnProperty.UseVisualStyleBackColor = false;
+            this.btnProperty.Click += new System.EventHandler(this.btnProperty_Click);
             // 
             // btnPropertyType
             // 
