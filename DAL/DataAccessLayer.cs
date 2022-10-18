@@ -72,7 +72,71 @@ namespace DAL
             dbComm = new SqlCommand("sp_InsertProperties", dbConn);
             dbComm.CommandType= CommandType.StoredProcedure;
 
-            dbComm.Parameters.AddWithValue("@Description",)
+            dbComm.Parameters.AddWithValue("@Description", prop.Description);
+            dbComm.Parameters.AddWithValue("@Price", prop.Price);
+            dbComm.Parameters.AddWithValue("@Image", prop.image);
+            dbComm.Parameters.AddWithValue("@PropertyTypeID", prop.PropertyTypeID);
+            dbComm.Parameters.AddWithValue("@Status", prop.Status);
+            dbComm.Parameters.AddWithValue("@SUburbsID", prop.SuburbID);
+
+            int x = dbComm.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+
+
+        }
+
+        public int UpdateProperty(Properties prop)
+        {
+            if (dbConn.State == ConnectionState.Closed)
+            {
+                dbConn.Open();
+            }
+
+            string sql = "sp_UpdateProperties";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@PropertyTypeID", prop.PropertyTypeID);
+            dbComm.Parameters.AddWithValue("@Price", prop.Price.ToString());
+            dbComm.Parameters.AddWithValue("@Status", prop.Status);
+            dbComm.Parameters.AddWithValue("@PropertyID", prop.PropertyID);
+
+            int x =dbComm.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+        }
+        public int DeleteProperty(Properties prop)
+        {
+            if(dbConn.State == ConnectionState.Closed)
+            {
+                dbConn.Open();
+            }
+            string sql = "sp_HardDeleteProperties";
+            dbComm=new SqlCommand(sql, dbConn);
+            dbComm.CommandType=CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@PropertyID", prop.PropertyID);
+
+            int x =dbComm.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+        }
+        public DataTable DisplayProperty()
+        {
+            if(dbConn.State == ConnectionState.Closed)
+            {
+                dbConn.Open();
+            }
+            string sql = "sp_DisplayProperty";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+
+
         }
 
 

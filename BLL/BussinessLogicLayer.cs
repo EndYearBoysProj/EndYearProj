@@ -24,6 +24,21 @@ namespace BLL
         {
             return dal.DisplayPropertyType();
         }
-
+        public int InsertProperty(Properties prop)
+        {
+            return dal.InsertProperty(prop);
+        }
+        public int UpdateProperty(Properties prop)
+        {
+            return dal.UpdateProperty(prop);
+        }
+        public int DeleteProperty(Properties prop)
+        {
+            return dal.DeleteProperty(prop);
+        }
+        public DataTable DisplayProperty()
+        {
+            return dal.DisplayProperty();
+        }
     }
 }
