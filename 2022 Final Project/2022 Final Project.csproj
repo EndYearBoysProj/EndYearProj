@@ -99,6 +99,12 @@
     <Compile Include="PropertyFrm.Designer.cs">
       <DependentUpon>PropertyFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Province.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Province.Designer.cs">
+      <DependentUpon>Province.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +134,9 @@
     </Compile>
     <EmbeddedResource Include="PropertyFrm.resx">
       <DependentUpon>PropertyFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Province.resx">
+      <DependentUpon>Province.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

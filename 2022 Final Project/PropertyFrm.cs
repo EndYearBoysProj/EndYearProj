@@ -27,7 +27,7 @@ namespace _2022_Final_Project
 
             prop.Description = txtDescription.Text;
             prop.Price = double.Parse(txtPrice.Text);
-            prop.image = txtImage.Text;
+            prop.Image = txtImage.Text;
             prop.PropertyTypeID = int.Parse(txtPropertyTypeID.Text);
             prop.Status= cmbStatus.Text;
             prop.SuburbID = int.Parse(cmbSuburbsID.Text);

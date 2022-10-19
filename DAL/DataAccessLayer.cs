@@ -360,7 +360,7 @@ namespace DAL
             dbAdapter.Fill(dt);
             return dt;
         }
-
+        public int InsertProvince
 
     }
 }
