@@ -38,7 +38,7 @@ namespace _2022_Final_Project
 
         private void btnDisplay_Click(object sender, EventArgs e)
         {
-            PropertyType type = new PropertyType();
+            
             dgvType.DataSource = bll.DisplayPropertyType();
 
         }

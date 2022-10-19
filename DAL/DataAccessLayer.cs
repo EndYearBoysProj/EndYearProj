@@ -75,7 +75,7 @@ namespace DAL
 
             dbComm.Parameters.AddWithValue("@Description", prop.Description);
             dbComm.Parameters.AddWithValue("@Price", prop.Price);
-            dbComm.Parameters.AddWithValue("@Image", prop.image);
+            dbComm.Parameters.AddWithValue("@Image", prop.Image);
             dbComm.Parameters.AddWithValue("@PropertyTypeID", prop.PropertyTypeID);
             dbComm.Parameters.AddWithValue("@Status", prop.Status);
             dbComm.Parameters.AddWithValue("@SuburbsID", prop.SuburbID);

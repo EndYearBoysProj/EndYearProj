@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Admin.cs" />
     <Compile Include="Agency.cs" />
+    <Compile Include="Agent.cs" />
     <Compile Include="City.cs" />
     <Compile Include="DataAccessLayer.cs" />
     <Compile Include="PropertiesD.cs" />

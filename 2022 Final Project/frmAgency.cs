@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DAP;
+using DAL;
 using BLL;
 
 namespace ProjectForms
@@ -18,8 +18,8 @@ namespace ProjectForms
         {
             InitializeComponent();
         }
-        DataAccessProperty dap = new DataAccessProperty();
-        BusinessLogicLayer bll = new BusinessLogicLayer();
+        DataAccessLayer dal = new DataAccessLayer();
+        BussinessLogicLayer bll = new BussinessLogicLayer();
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Agency agency = new Agency();
