@@ -82,17 +82,11 @@ namespace _2022_Final_Project
             this.Close();
         }
 
-        private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
 
-        private void PropertyFrm_Load(object sender, EventArgs e)
+        private void dgvProperty_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-        
-        
-          
-        
+
     }
 }
