@@ -52,6 +52,7 @@
     <Compile Include="PropertiesD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyType.cs" />
+    <Compile Include="ProvinceD.cs" />
     <Compile Include="Suburb.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -140,6 +140,7 @@
             // 
             // txtPropertyID
             // 
+            this.txtPropertyID.Enabled = false;
             this.txtPropertyID.Location = new System.Drawing.Point(438, 31);
             this.txtPropertyID.Name = "txtPropertyID";
             this.txtPropertyID.ReadOnly = true;
@@ -237,6 +238,17 @@
             // cmbSuburbsID
             // 
             this.cmbSuburbsID.FormattingEnabled = true;
+            this.cmbSuburbsID.Items.AddRange(new object[] {
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17"});
             this.cmbSuburbsID.Location = new System.Drawing.Point(438, 204);
             this.cmbSuburbsID.Name = "cmbSuburbsID";
             this.cmbSuburbsID.Size = new System.Drawing.Size(350, 24);
@@ -245,6 +257,9 @@
             // cmbStatus
             // 
             this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "Active",
+            "In-Active"});
             this.cmbStatus.Location = new System.Drawing.Point(438, 175);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(350, 24);

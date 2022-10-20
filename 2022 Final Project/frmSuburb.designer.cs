@@ -62,19 +62,20 @@ namespace ProjectForms
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
             this.moreToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(697, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(697, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(78, 26);
             this.homeToolStripMenuItem.Text = "Home";
             // 
             // moreToolStripMenuItem
@@ -89,7 +90,7 @@ namespace ProjectForms
             this.tenantToolStripMenuItem,
             this.rentalToolStripMenuItem});
             this.moreToolStripMenuItem.Name = "moreToolStripMenuItem";
-            this.moreToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.moreToolStripMenuItem.Size = new System.Drawing.Size(71, 26);
             this.moreToolStripMenuItem.Text = "More";
             // 
             // propertyTypeToolStripMenuItem
@@ -99,43 +100,43 @@ namespace ProjectForms
             this.propertyToolStripMenuItem1,
             this.propertyAgentToolStripMenuItem});
             this.propertyTypeToolStripMenuItem.Name = "propertyTypeToolStripMenuItem";
-            this.propertyTypeToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.propertyTypeToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
             this.propertyTypeToolStripMenuItem.Text = "Property";
             // 
             // propertyTypeToolStripMenuItem1
             // 
             this.propertyTypeToolStripMenuItem1.Name = "propertyTypeToolStripMenuItem1";
-            this.propertyTypeToolStripMenuItem1.Size = new System.Drawing.Size(189, 24);
+            this.propertyTypeToolStripMenuItem1.Size = new System.Drawing.Size(236, 26);
             this.propertyTypeToolStripMenuItem1.Text = "Property Type";
             // 
             // propertyToolStripMenuItem1
             // 
             this.propertyToolStripMenuItem1.Name = "propertyToolStripMenuItem1";
-            this.propertyToolStripMenuItem1.Size = new System.Drawing.Size(189, 24);
+            this.propertyToolStripMenuItem1.Size = new System.Drawing.Size(236, 26);
             this.propertyToolStripMenuItem1.Text = "Property";
             // 
             // propertyAgentToolStripMenuItem
             // 
             this.propertyAgentToolStripMenuItem.Name = "propertyAgentToolStripMenuItem";
-            this.propertyAgentToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
+            this.propertyAgentToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
             this.propertyAgentToolStripMenuItem.Text = "Property Agent";
             // 
             // propertyToolStripMenuItem
             // 
             this.propertyToolStripMenuItem.Name = "propertyToolStripMenuItem";
-            this.propertyToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.propertyToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
             this.propertyToolStripMenuItem.Text = "Province";
             // 
             // cityToolStripMenuItem
             // 
             this.cityToolStripMenuItem.Name = "cityToolStripMenuItem";
-            this.cityToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.cityToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
             this.cityToolStripMenuItem.Text = "City";
             // 
             // suburbToolStripMenuItem
             // 
             this.suburbToolStripMenuItem.Name = "suburbToolStripMenuItem";
-            this.suburbToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.suburbToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
             this.suburbToolStripMenuItem.Text = "Suburb";
             // 
             // agencyToolStripMenuItem
@@ -145,47 +146,48 @@ namespace ProjectForms
             this.remaxToolStripMenuItem,
             this.justPropertyToolStripMenuItem});
             this.agencyToolStripMenuItem.Name = "agencyToolStripMenuItem";
-            this.agencyToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.agencyToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
             this.agencyToolStripMenuItem.Text = "Agency";
             // 
             // rawsonToolStripMenuItem
             // 
             this.rawsonToolStripMenuItem.Name = "rawsonToolStripMenuItem";
-            this.rawsonToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.rawsonToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.rawsonToolStripMenuItem.Text = "Rawson";
             // 
             // remaxToolStripMenuItem
             // 
             this.remaxToolStripMenuItem.Name = "remaxToolStripMenuItem";
-            this.remaxToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.remaxToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.remaxToolStripMenuItem.Text = "Remax";
             // 
             // justPropertyToolStripMenuItem
             // 
             this.justPropertyToolStripMenuItem.Name = "justPropertyToolStripMenuItem";
-            this.justPropertyToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.justPropertyToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.justPropertyToolStripMenuItem.Text = "Just Property";
             // 
             // agentToolStripMenuItem
             // 
             this.agentToolStripMenuItem.Name = "agentToolStripMenuItem";
-            this.agentToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.agentToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
             this.agentToolStripMenuItem.Text = "Agent";
             // 
             // tenantToolStripMenuItem
             // 
             this.tenantToolStripMenuItem.Name = "tenantToolStripMenuItem";
-            this.tenantToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.tenantToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
             this.tenantToolStripMenuItem.Text = "Tenant";
             // 
             // rentalToolStripMenuItem
             // 
             this.rentalToolStripMenuItem.Name = "rentalToolStripMenuItem";
-            this.rentalToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.rentalToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
             this.rentalToolStripMenuItem.Text = "Rental";
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.groupBox1.Controls.Add(this.btnDisplay);
             this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.txtSuburb);
@@ -199,40 +201,46 @@ namespace ProjectForms
             // 
             // btnDisplay
             // 
+            this.btnDisplay.BackColor = System.Drawing.Color.Yellow;
+            this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDisplay.Location = new System.Drawing.Point(460, 78);
             this.btnDisplay.Name = "btnDisplay";
             this.btnDisplay.Size = new System.Drawing.Size(113, 28);
             this.btnDisplay.TabIndex = 3;
             this.btnDisplay.Text = "Display";
-            this.btnDisplay.UseVisualStyleBackColor = true;
+            this.btnDisplay.UseVisualStyleBackColor = false;
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.Color.Yellow;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Location = new System.Drawing.Point(460, 34);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(113, 28);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // txtSuburb
             // 
             this.txtSuburb.Location = new System.Drawing.Point(155, 58);
             this.txtSuburb.Name = "txtSuburb";
-            this.txtSuburb.Size = new System.Drawing.Size(260, 26);
+            this.txtSuburb.Size = new System.Drawing.Size(260, 30);
             this.txtSuburb.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(22, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 20);
+            this.label1.Size = new System.Drawing.Size(132, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter Suburb:";
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(12, 176);
             this.groupBox2.Name = "groupBox2";
@@ -246,13 +254,15 @@ namespace ProjectForms
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(15, 33);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(639, 216);
             this.dataGridView1.TabIndex = 0;
             // 
             // frmSuburb
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(697, 461);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

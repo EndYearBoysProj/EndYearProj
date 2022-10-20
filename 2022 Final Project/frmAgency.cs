@@ -52,5 +52,10 @@ namespace ProjectForms
                 MessageBox.Show(d + "Agency Deleted.");
             }
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

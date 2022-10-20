@@ -30,12 +30,12 @@
         {
             this.btnAddType = new System.Windows.Forms.Button();
             this.dgvType = new System.Windows.Forms.DataGridView();
-            this.txtDescription = new System.Windows.Forms.TextBox();
             this.btnDisplay = new System.Windows.Forms.Button();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
+            this.cmbPropDescription = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvType)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,13 +61,6 @@
             this.dgvType.Size = new System.Drawing.Size(580, 142);
             this.dgvType.TabIndex = 1;
             // 
-            // txtDescription
-            // 
-            this.txtDescription.Location = new System.Drawing.Point(279, 145);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(307, 22);
-            this.txtDescription.TabIndex = 2;
-            // 
             // btnDisplay
             // 
             this.btnDisplay.BackColor = System.Drawing.Color.Yellow;
@@ -82,6 +75,7 @@
             // 
             // txtID
             // 
+            this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(279, 67);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
@@ -122,18 +116,31 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // cmbPropDescription
+            // 
+            this.cmbPropDescription.FormattingEnabled = true;
+            this.cmbPropDescription.Items.AddRange(new object[] {
+            "Townhouse",
+            "Apartment",
+            "House",
+            "Residential Area"});
+            this.cmbPropDescription.Location = new System.Drawing.Point(279, 142);
+            this.cmbPropDescription.Name = "cmbPropDescription";
+            this.cmbPropDescription.Size = new System.Drawing.Size(307, 24);
+            this.cmbPropDescription.TabIndex = 8;
+            // 
             // PropertyTypefrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(612, 450);
+            this.Controls.Add(this.cmbPropDescription);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnDisplay);
-            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.dgvType);
             this.Controls.Add(this.btnAddType);
             this.Name = "PropertyTypefrm";
@@ -149,11 +156,11 @@
 
         private System.Windows.Forms.Button btnAddType;
         private System.Windows.Forms.DataGridView dgvType;
-        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Button btnDisplay;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ComboBox cmbPropDescription;
     }
 }

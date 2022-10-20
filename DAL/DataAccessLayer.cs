@@ -360,7 +360,41 @@ namespace DAL
             dbAdapter.Fill(dt);
             return dt;
         }
-        public int InsertProvince
+        public int InsertProvince(ProvinceD prov)
+        {
+
+            try
+            {
+                dbConn.Open();
+            }
+            catch
+            {
+
+            }
+            dbComm = new SqlCommand("sp_InsertProvince", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@Description", prov.Description);
+
+            int x = dbComm.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+        }
+        public DataTable GetProvince()
+        {
+            if (dbConn.State == ConnectionState.Closed)
+            {
+                dbConn.Open();
+            }
+            string sql = "sp_GetProvince";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+
+        }
 
     }
 }

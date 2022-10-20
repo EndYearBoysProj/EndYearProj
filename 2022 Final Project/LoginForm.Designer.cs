@@ -60,7 +60,7 @@
             this.label1.Location = new System.Drawing.Point(168, 46);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(348, 33);
+            this.label1.Size = new System.Drawing.Size(435, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sign Into Property Central";
             // 
@@ -82,9 +82,9 @@
             this.label2.Location = new System.Drawing.Point(51, 154);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 21);
+            this.label2.Size = new System.Drawing.Size(119, 23);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Email :";
+            this.label2.Text = "Username :";
             // 
             // label3
             // 
@@ -93,7 +93,7 @@
             this.label3.Location = new System.Drawing.Point(51, 212);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 21);
+            this.label3.Size = new System.Drawing.Size(114, 23);
             this.label3.TabIndex = 3;
             this.label3.Text = "Password :";
             // 
@@ -102,7 +102,7 @@
             this.txtEmail.Location = new System.Drawing.Point(308, 156);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(263, 22);
+            this.txtEmail.Size = new System.Drawing.Size(263, 26);
             this.txtEmail.TabIndex = 4;
             // 
             // txtPassword
@@ -110,7 +110,8 @@
             this.txtPassword.Location = new System.Drawing.Point(308, 213);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(263, 22);
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(263, 26);
             this.txtPassword.TabIndex = 5;
             // 
             // btnSignIn
@@ -143,7 +144,7 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 479);
             this.Controls.Add(this.btnBack);

@@ -59,6 +59,7 @@
             this.BtnAdd.TabIndex = 1;
             this.BtnAdd.Text = "Add";
             this.BtnAdd.UseVisualStyleBackColor = false;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // BtnBack
             // 
@@ -81,6 +82,7 @@
             this.BtnDisplay.TabIndex = 3;
             this.BtnDisplay.Text = "Display";
             this.BtnDisplay.UseVisualStyleBackColor = false;
+            this.BtnDisplay.Click += new System.EventHandler(this.BtnDisplay_Click);
             // 
             // label1
             // 
@@ -115,6 +117,16 @@
             // cmbDescription
             // 
             this.cmbDescription.FormattingEnabled = true;
+            this.cmbDescription.Items.AddRange(new object[] {
+            "Eastern Cape",
+            "Western Cape",
+            "Kwa-Zulu-Natal",
+            "Free State",
+            "Northern Cape",
+            "Gauteng",
+            "Limpopo",
+            "Mpumalanga",
+            "North West"});
             this.cmbDescription.Location = new System.Drawing.Point(232, 136);
             this.cmbDescription.Name = "cmbDescription";
             this.cmbDescription.Size = new System.Drawing.Size(351, 24);

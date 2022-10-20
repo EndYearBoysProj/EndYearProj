@@ -24,11 +24,11 @@ namespace _2022_Final_Project
 
         private void btnAddType_Click(object sender, EventArgs e)
         {
-            PropertyType type = new PropertyType();
+            PropertyType ty = new PropertyType();
 
-            type.PropertyTypeDescription = txtDescription.Text;
+            ty.PropertyTypeDescription = cmbPropDescription.Text;
 
-            int x = bll.InsertPropertyType(type);
+            int x = bll.InsertPropertyType(ty);
             if (x > 0)
             {
                 MessageBox.Show("Your information has been added !");

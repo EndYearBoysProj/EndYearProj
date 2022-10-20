@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL;
+using BLL;
 
 namespace _2022_Final_Project
 {
@@ -15,6 +17,25 @@ namespace _2022_Final_Project
         public Province()
         {
             InitializeComponent();
+        }
+        BussinessLogicLayer bll = new BussinessLogicLayer();
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            ProvinceD pr = new ProvinceD();
+
+            pr.Description = cmbDescription.Text;
+           
+
+            int x = bll.InsertProvince(pr);
+            if (x > 0)
+            {
+                MessageBox.Show("Your information has been added !");
+            }
+        }
+
+        private void BtnDisplay_Click(object sender, EventArgs e)
+        {
+            dgvProvince.DataSource = bll.GetProvince();
         }
     }
 }

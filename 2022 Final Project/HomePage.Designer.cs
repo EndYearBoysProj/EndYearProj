@@ -42,7 +42,7 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(223, 45);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(544, 340);
+            this.groupBox1.Size = new System.Drawing.Size(784, 501);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -50,10 +50,10 @@
             // 
             this.btnProperty.BackColor = System.Drawing.Color.Yellow;
             this.btnProperty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProperty.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProperty.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProperty.Location = new System.Drawing.Point(27, 45);
             this.btnProperty.Name = "btnProperty";
-            this.btnProperty.Size = new System.Drawing.Size(175, 39);
+            this.btnProperty.Size = new System.Drawing.Size(150, 35);
             this.btnProperty.TabIndex = 0;
             this.btnProperty.Text = "Property";
             this.btnProperty.UseVisualStyleBackColor = false;
@@ -63,10 +63,10 @@
             // 
             this.btnPropertyType.BackColor = System.Drawing.Color.Yellow;
             this.btnPropertyType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPropertyType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPropertyType.Location = new System.Drawing.Point(27, 121);
+            this.btnPropertyType.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPropertyType.Location = new System.Drawing.Point(27, 86);
             this.btnPropertyType.Name = "btnPropertyType";
-            this.btnPropertyType.Size = new System.Drawing.Size(175, 39);
+            this.btnPropertyType.Size = new System.Drawing.Size(150, 35);
             this.btnPropertyType.TabIndex = 1;
             this.btnPropertyType.Text = "Property Type";
             this.btnPropertyType.UseVisualStyleBackColor = false;
@@ -76,21 +76,23 @@
             // 
             this.btnProvince.BackColor = System.Drawing.Color.Yellow;
             this.btnProvince.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProvince.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProvince.Location = new System.Drawing.Point(27, 197);
+            this.btnProvince.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProvince.Location = new System.Drawing.Point(27, 127);
             this.btnProvince.Name = "btnProvince";
-            this.btnProvince.Size = new System.Drawing.Size(175, 39);
+            this.btnProvince.Size = new System.Drawing.Size(150, 35);
             this.btnProvince.TabIndex = 2;
             this.btnProvince.Text = "Province";
             this.btnProvince.UseVisualStyleBackColor = false;
+            this.btnProvince.Click += new System.EventHandler(this.btnProvince_Click);
             // 
             // btnSuburb
             // 
             this.btnSuburb.BackColor = System.Drawing.Color.Yellow;
             this.btnSuburb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuburb.Location = new System.Drawing.Point(27, 270);
+            this.btnSuburb.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuburb.Location = new System.Drawing.Point(27, 168);
             this.btnSuburb.Name = "btnSuburb";
-            this.btnSuburb.Size = new System.Drawing.Size(175, 39);
+            this.btnSuburb.Size = new System.Drawing.Size(150, 35);
             this.btnSuburb.TabIndex = 3;
             this.btnSuburb.Text = "Suburb";
             this.btnSuburb.UseVisualStyleBackColor = false;
@@ -99,10 +101,10 @@
             // 
             this.btnBack.BackColor = System.Drawing.Color.Yellow;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(27, 346);
+            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(27, 500);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(175, 39);
+            this.btnBack.Size = new System.Drawing.Size(150, 35);
             this.btnBack.TabIndex = 4;
             this.btnBack.Text = "Back to Login";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -110,10 +112,10 @@
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(807, 415);
+            this.ClientSize = new System.Drawing.Size(1019, 558);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSuburb);

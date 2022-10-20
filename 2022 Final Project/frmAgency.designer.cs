@@ -64,7 +64,7 @@ namespace ProjectForms
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Gold;
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.groupBox1.Controls.Add(this.dgvAgency);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
@@ -80,25 +80,27 @@ namespace ProjectForms
             this.dgvAgency.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAgency.Location = new System.Drawing.Point(15, 37);
             this.dgvAgency.Name = "dgvAgency";
+            this.dgvAgency.RowHeadersWidth = 51;
             this.dgvAgency.Size = new System.Drawing.Size(604, 204);
             this.dgvAgency.TabIndex = 0;
             // 
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
             this.moreToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(658, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(658, 30);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(78, 26);
             this.homeToolStripMenuItem.Text = "Home";
             // 
             // moreToolStripMenuItem
@@ -113,7 +115,7 @@ namespace ProjectForms
             this.tenantToolStripMenuItem,
             this.rentalToolStripMenuItem});
             this.moreToolStripMenuItem.Name = "moreToolStripMenuItem";
-            this.moreToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.moreToolStripMenuItem.Size = new System.Drawing.Size(71, 26);
             this.moreToolStripMenuItem.Text = "More";
             // 
             // propertyTypeToolStripMenuItem
@@ -123,43 +125,43 @@ namespace ProjectForms
             this.propertyToolStripMenuItem1,
             this.propertyAgentToolStripMenuItem});
             this.propertyTypeToolStripMenuItem.Name = "propertyTypeToolStripMenuItem";
-            this.propertyTypeToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.propertyTypeToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
             this.propertyTypeToolStripMenuItem.Text = "Property";
             // 
             // propertyTypeToolStripMenuItem1
             // 
             this.propertyTypeToolStripMenuItem1.Name = "propertyTypeToolStripMenuItem1";
-            this.propertyTypeToolStripMenuItem1.Size = new System.Drawing.Size(189, 24);
+            this.propertyTypeToolStripMenuItem1.Size = new System.Drawing.Size(236, 26);
             this.propertyTypeToolStripMenuItem1.Text = "Property Type";
             // 
             // propertyToolStripMenuItem1
             // 
             this.propertyToolStripMenuItem1.Name = "propertyToolStripMenuItem1";
-            this.propertyToolStripMenuItem1.Size = new System.Drawing.Size(189, 24);
+            this.propertyToolStripMenuItem1.Size = new System.Drawing.Size(236, 26);
             this.propertyToolStripMenuItem1.Text = "Property";
             // 
             // propertyAgentToolStripMenuItem
             // 
             this.propertyAgentToolStripMenuItem.Name = "propertyAgentToolStripMenuItem";
-            this.propertyAgentToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
+            this.propertyAgentToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
             this.propertyAgentToolStripMenuItem.Text = "Property Agent";
             // 
             // propertyToolStripMenuItem
             // 
             this.propertyToolStripMenuItem.Name = "propertyToolStripMenuItem";
-            this.propertyToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.propertyToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
             this.propertyToolStripMenuItem.Text = "Province";
             // 
             // cityToolStripMenuItem
             // 
             this.cityToolStripMenuItem.Name = "cityToolStripMenuItem";
-            this.cityToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.cityToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
             this.cityToolStripMenuItem.Text = "City";
             // 
             // suburbToolStripMenuItem
             // 
             this.suburbToolStripMenuItem.Name = "suburbToolStripMenuItem";
-            this.suburbToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.suburbToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
             this.suburbToolStripMenuItem.Text = "Suburb";
             // 
             // agencyToolStripMenuItem
@@ -169,48 +171,48 @@ namespace ProjectForms
             this.remaxToolStripMenuItem,
             this.justPropertyToolStripMenuItem});
             this.agencyToolStripMenuItem.Name = "agencyToolStripMenuItem";
-            this.agencyToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.agencyToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
             this.agencyToolStripMenuItem.Text = "Agency";
             // 
             // rawsonToolStripMenuItem
             // 
             this.rawsonToolStripMenuItem.Name = "rawsonToolStripMenuItem";
-            this.rawsonToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.rawsonToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.rawsonToolStripMenuItem.Text = "Rawson";
             // 
             // remaxToolStripMenuItem
             // 
             this.remaxToolStripMenuItem.Name = "remaxToolStripMenuItem";
-            this.remaxToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.remaxToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.remaxToolStripMenuItem.Text = "Remax";
             // 
             // justPropertyToolStripMenuItem
             // 
             this.justPropertyToolStripMenuItem.Name = "justPropertyToolStripMenuItem";
-            this.justPropertyToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.justPropertyToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.justPropertyToolStripMenuItem.Text = "Just Property";
             // 
             // agentToolStripMenuItem
             // 
             this.agentToolStripMenuItem.Name = "agentToolStripMenuItem";
-            this.agentToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.agentToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
             this.agentToolStripMenuItem.Text = "Agent";
             // 
             // tenantToolStripMenuItem
             // 
             this.tenantToolStripMenuItem.Name = "tenantToolStripMenuItem";
-            this.tenantToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.tenantToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
             this.tenantToolStripMenuItem.Text = "Tenant";
             // 
             // rentalToolStripMenuItem
             // 
             this.rentalToolStripMenuItem.Name = "rentalToolStripMenuItem";
-            this.rentalToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+            this.rentalToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
             this.rentalToolStripMenuItem.Text = "Rental";
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Gold;
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.groupBox2.Controls.Add(this.txtAgencyID);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.btnDelete);
@@ -225,12 +227,14 @@ namespace ProjectForms
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Agency";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // txtAgencyID
             // 
+            this.txtAgencyID.Enabled = false;
             this.txtAgencyID.Location = new System.Drawing.Point(172, 44);
             this.txtAgencyID.Name = "txtAgencyID";
-            this.txtAgencyID.Size = new System.Drawing.Size(247, 26);
+            this.txtAgencyID.Size = new System.Drawing.Size(247, 30);
             this.txtAgencyID.TabIndex = 6;
             // 
             // label2
@@ -240,14 +244,15 @@ namespace ProjectForms
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(28, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 18);
+            this.label2.Size = new System.Drawing.Size(116, 23);
             this.label2.TabIndex = 5;
             this.label2.Text = "Agency ID :";
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDelete.BackColor = System.Drawing.Color.Yellow;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDelete.Location = new System.Drawing.Point(496, 99);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(117, 30);
@@ -258,8 +263,9 @@ namespace ProjectForms
             // 
             // btnDisplay
             // 
-            this.btnDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnDisplay.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDisplay.BackColor = System.Drawing.Color.Yellow;
+            this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDisplay.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDisplay.Location = new System.Drawing.Point(497, 63);
             this.btnDisplay.Name = "btnDisplay";
             this.btnDisplay.Size = new System.Drawing.Size(117, 30);
@@ -270,8 +276,9 @@ namespace ProjectForms
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAdd.BackColor = System.Drawing.Color.Yellow;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAdd.Location = new System.Drawing.Point(496, 25);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(117, 30);
@@ -284,7 +291,7 @@ namespace ProjectForms
             // 
             this.txtAgencyName.Location = new System.Drawing.Point(172, 85);
             this.txtAgencyName.Name = "txtAgencyName";
-            this.txtAgencyName.Size = new System.Drawing.Size(247, 26);
+            this.txtAgencyName.Size = new System.Drawing.Size(247, 30);
             this.txtAgencyName.TabIndex = 1;
             // 
             // label1
@@ -294,13 +301,13 @@ namespace ProjectForms
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(28, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 18);
+            this.label1.Size = new System.Drawing.Size(143, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter Agency :";
             // 
             // frmAgency
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(658, 466);

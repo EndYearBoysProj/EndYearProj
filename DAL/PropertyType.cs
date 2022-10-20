@@ -11,7 +11,7 @@ namespace DAL
         
 
 
-        PropertyType type = new PropertyType();
+        
     
         public int PropertyTypeID { get; set; }
         public string PropertyTypeDescription { get; set; }

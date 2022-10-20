@@ -23,16 +23,16 @@ namespace _2022_Final_Project
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
-            PropertiesD prop=new PropertiesD();   
+            PropertiesD pro=new PropertiesD();   
 
-            prop.Description = txtDescription.Text;
-            prop.Price = double.Parse(txtPrice.Text);
-            prop.Image = txtImage.Text;
-            prop.PropertyTypeID = int.Parse(txtPropertyTypeID.Text);
-            prop.Status= cmbStatus.Text;
-            prop.SuburbID = int.Parse(cmbSuburbsID.Text);
+            pro.Description = txtDescription.Text;
+            pro.Price = double.Parse(txtPrice.Text);
+            pro.Image = txtImage.Text;
+            pro.PropertyTypeID = int.Parse(txtPropertyTypeID.Text);
+            pro.Status = cmbStatus.Text;
+            pro.SuburbID = int.Parse(cmbSuburbsID.Text);
 
-            int x = bll.InsertProperty(prop);
+            int x = bll.InsertProperty(pro);
             if(x>0)
             {
                 MessageBox.Show("Your information has been added !");

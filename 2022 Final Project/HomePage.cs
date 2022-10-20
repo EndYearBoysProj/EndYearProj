@@ -38,5 +38,12 @@ namespace _2022_Final_Project
             frm.Show();
             this.Hide();
         }
+
+        private void btnProvince_Click(object sender, EventArgs e)
+        {
+            Province pr = new Province();
+            pr.Show();
+            this.Hide();
+        }
     }
 }

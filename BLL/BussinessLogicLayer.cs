@@ -84,6 +84,13 @@ namespace BLL
         {
             return dal.GetArea();
         }
-
+        public int InsertProvince(ProvinceD prov)
+        {
+            return dal.InsertProvince(prov);
+        }
+        public DataTable GetProvince()
+        {
+            return dal.GetProvince();
+        }
     }
 }
