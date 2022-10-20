@@ -67,24 +67,6 @@
     <Compile Include="frmAgency.designer.cs">
       <DependentUpon>frmAgency.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAgent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAgent.Designer.cs">
-      <DependentUpon>frmAgent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCity.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCity.Designer.cs">
-      <DependentUpon>frmCity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmLocationReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLocationReport.Designer.cs">
-      <DependentUpon>frmLocationReport.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmSuburb.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,15 +104,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAgency.resx">
       <DependentUpon>frmAgency.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAgent.resx">
-      <DependentUpon>frmAgent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCity.resx">
-      <DependentUpon>frmCity.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLocationReport.resx">
-      <DependentUpon>frmLocationReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSuburb.resx">
       <DependentUpon>frmSuburb.cs</DependentUpon>
