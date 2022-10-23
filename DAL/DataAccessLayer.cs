@@ -5,8 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using BLL;
-using DAL;
+
 
 namespace DAL
 {
@@ -308,13 +307,9 @@ namespace DAL
         }
         public DataTable GetAgent()
         {
-            try
+            if (dbConn.State == ConnectionState.Closed)
             {
                 dbConn.Open();
-            }
-            catch
-            {
-
             }
             dbComm = new SqlCommand("sp_GetAgent", dbConn);
             dt = new DataTable();
@@ -322,23 +317,20 @@ namespace DAL
             dbAdapter.Fill(dt);
             return dt;
         }
-        public int UpdateAgent(int AgentID, string Email, int Phone, string Status)
+        public int UpdateAgent(Agent age)
         {
-            try
+            if (dbConn.State == ConnectionState.Closed)
             {
                 dbConn.Open();
             }
-            catch
-            {
-
-            }
+            
             dbComm = new SqlCommand("sp_UpdateAgent", dbConn);
             dbComm.CommandType = CommandType.StoredProcedure;
 
-            dbComm.Parameters.AddWithValue("@AgentID", AgentID);
-            dbComm.Parameters.AddWithValue("@Email", Email);
-            dbComm.Parameters.AddWithValue("@Phone", Phone);
-            dbComm.Parameters.AddWithValue("@Status", Status);
+            dbComm.Parameters.AddWithValue("@AgentID",age.AgentID);
+            dbComm.Parameters.AddWithValue("@Email", age.Email);
+            dbComm.Parameters.AddWithValue("@Phone", age.Phone);
+            dbComm.Parameters.AddWithValue("@Status", age.Status);
 
             int x = dbComm.ExecuteNonQuery();
             dbConn.Close();
@@ -346,13 +338,9 @@ namespace DAL
         }
         public DataTable GetArea()
         {
-            try
+            if (dbConn.State == ConnectionState.Closed)
             {
                 dbConn.Open();
-            }
-            catch
-            {
-
             }
             dbComm = new SqlCommand("sp_GetArea", dbConn);
             dt = new DataTable();
@@ -362,15 +350,11 @@ namespace DAL
         }
         public int InsertProvince(ProvinceD prov)
         {
-
-            try
+            if (dbConn.State == ConnectionState.Closed)
             {
                 dbConn.Open();
             }
-            catch
-            {
 
-            }
             dbComm = new SqlCommand("sp_InsertProvince", dbConn);
             dbComm.CommandType = CommandType.StoredProcedure;
 

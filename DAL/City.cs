@@ -12,15 +12,6 @@ namespace DAL
         public string CityDescription { get; set; }
         public int ProvinceID { get; set; }
 
-        public City(int cityID, string cityDescription, int provinceID)
-        {
-            this.CityID = cityID;
-            this.CityDescription = cityDescription;
-            this.ProvinceID = provinceID;
-        }
-        public City()
-        {
-
-        }
+      
     }
 }

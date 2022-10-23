@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using DAL;
+using DAL; 
 
 namespace BLL
 {
@@ -68,13 +68,13 @@ namespace BLL
         {
             return dal.DeleteAgency(agency);
         }
-        public int UpdateAgent(int AgentID, string Email, int Phone, string Status)
+        public int UpdateAgent(Agent a)
         {
-            return dal.UpdateAgent(AgentID, Email, Phone, Status);
+            return dal.UpdateAgent(a);
         }
-        public int InsertAgent(Agent agent)
+        public int InsertAgent(Agent age)
         {
-            return dal.InsertAgent(agent);
+            return dal.InsertAgent(age);
         }
         public DataTable GetAgent()
         {

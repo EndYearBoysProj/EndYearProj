@@ -13,16 +13,11 @@ namespace DAL
         public int PostalCode { get; set; }
         public int CityID { get; set; }
 
-        public Suburb(int suburbID, string suburbDesc, int postalCode, int cityID)
-        {
-            this.SuburbID = suburbID;
-            this.SuburbDescription = suburbDesc;
-            this.PostalCode = postalCode;
-            this.CityID = cityID;
-        }
-        public Suburb()
-        {
 
-        }
     }
+
+
+
 }
+    
+
