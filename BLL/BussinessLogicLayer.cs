@@ -68,13 +68,17 @@ namespace BLL
         {
             return dal.DeleteAgency(agency);
         }
-        public int UpdateAgent(Agent a)
+        public int UpdateAgent(Agent age)
         {
-            return dal.UpdateAgent(a);
+            return dal.UpdateAgent(age);
         }
         public int InsertAgent(Agent age)
         {
             return dal.InsertAgent(age);
+        }
+        public int DeleteAgent(Agent age)
+        {
+            return dal.DeleteAgent(age);
         }
         public DataTable GetAgent()
         {

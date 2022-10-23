@@ -51,9 +51,12 @@
     <Compile Include="DataAccessLayer.cs" />
     <Compile Include="PropertiesD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyAgent.cs" />
     <Compile Include="PropertyType.cs" />
     <Compile Include="ProvinceD.cs" />
+    <Compile Include="RentalD.cs" />
     <Compile Include="Suburb.cs" />
+    <Compile Include="TenantD.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

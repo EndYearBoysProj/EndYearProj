@@ -22,7 +22,7 @@ namespace DAL
             dbConn.Open();
 
             string sql = "sp_Login";
-            dbComm= new SqlCommand(sql,dbConn);
+            dbComm = new SqlCommand(sql, dbConn);
             dbComm.CommandType = CommandType.StoredProcedure;
             dbComm.Parameters.AddWithValue("@Email", email);
             dbComm.Parameters.AddWithValue("@Password", password);
@@ -43,7 +43,7 @@ namespace DAL
 
 
             dbComm.Parameters.AddWithValue("@PropertyTypeDescription", type.PropertyTypeDescription);
-         
+
             int x = dbComm.ExecuteNonQuery();
             dbConn.Close();
             return x;
@@ -62,15 +62,15 @@ namespace DAL
             dbConn.Close();
             return dt;
 
-        } 
+        }
         public int InsertProperty(PropertiesD prop)
         {
-            if(dbConn.State == ConnectionState.Closed)
+            if (dbConn.State == ConnectionState.Closed)
             {
                 dbConn.Open();
             }
             dbComm = new SqlCommand("sp_InsertProperties", dbConn);
-            dbComm.CommandType= CommandType.StoredProcedure;
+            dbComm.CommandType = CommandType.StoredProcedure;
 
             dbComm.Parameters.AddWithValue("@Description", prop.Description);
             dbComm.Parameters.AddWithValue("@Price", prop.Price);
@@ -88,7 +88,7 @@ namespace DAL
 
         public int UpdateProperty(PropertiesD p)
         {
-           
+
             if (dbConn.State == ConnectionState.Closed)
             {
                 dbConn.Open();
@@ -103,30 +103,30 @@ namespace DAL
             dbComm.Parameters.AddWithValue("@Status", p.Status);
             dbComm.Parameters.AddWithValue("@PropertyID", p.PropertyID);
 
-            int x =dbComm.ExecuteNonQuery();
+            int x = dbComm.ExecuteNonQuery();
             dbConn.Close();
             return x;
         }
         public int DeleteProperty(PropertiesD d)
         {
-            
-            if(dbConn.State == ConnectionState.Closed)
+
+            if (dbConn.State == ConnectionState.Closed)
             {
                 dbConn.Open();
             }
             string sql = "sp_HardDeleteProperties";
-            dbComm=new SqlCommand(sql, dbConn);
-            dbComm.CommandType=CommandType.StoredProcedure;
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
 
             dbComm.Parameters.AddWithValue("@PropertyID", d.PropertyID);
 
-            int x =dbComm.ExecuteNonQuery();
+            int x = dbComm.ExecuteNonQuery();
             dbConn.Close();
             return x;
         }
         public DataTable DisplayProperty()
         {
-            if(dbConn.State == ConnectionState.Closed)
+            if (dbConn.State == ConnectionState.Closed)
             {
                 dbConn.Open();
             }
@@ -142,38 +142,30 @@ namespace DAL
         }
         public int InsertCity(City city)
         {
-            try
+            if (dbConn.State == ConnectionState.Closed)
             {
                 dbConn.Open();
             }
-            catch
-            {
-
-            }
-            dbComm = new SqlCommand("sp_InsertCity", dbConn);
+            dbComm = new SqlCommand("sp_InsertCities", dbConn);
             dbComm.CommandType = CommandType.StoredProcedure;
 
 
             dbComm.Parameters.AddWithValue("@CityDescription", city.CityDescription);
             dbComm.Parameters.AddWithValue("@ProvinceID", city.ProvinceID);
 
-            int i = dbComm.ExecuteNonQuery();
+            int x = dbComm.ExecuteNonQuery();
             dbConn.Close();
-            return i;
+            return x;
 
         }
 
         public DataTable GetCity()
         {
-            try
+            if (dbConn.State == ConnectionState.Closed)
             {
                 dbConn.Open();
             }
-            catch
-            {
-
-            }
-            dbComm = new SqlCommand("sp_GetCity", dbConn);
+            dbComm = new SqlCommand("sp_GetCities", dbConn);
             dt = new DataTable();
             dbAdapter = new SqlDataAdapter(dbComm);
             dbAdapter.Fill(dt);
@@ -220,18 +212,14 @@ namespace DAL
         }
         public int InsertAgency(Agency agency)
         {
-            try
+            if (dbConn.State == ConnectionState.Closed)
             {
                 dbConn.Open();
-            }
-            catch
-            {
-
             }
             dbComm = new SqlCommand("sp_InsertAgency", dbConn);
             dbComm.CommandType = CommandType.StoredProcedure;
 
-            dbComm.Parameters.AddWithValue("@AgencyID", agency.AgencyID);
+            
             dbComm.Parameters.AddWithValue("@AgencyName", agency.AgencyName);
             dbComm.Parameters.AddWithValue("@SuburbID", agency.SuburbID);
 
@@ -243,13 +231,9 @@ namespace DAL
         }
         public DataTable GetAgency()
         {
-            try
+            if (dbConn.State == ConnectionState.Closed)
             {
                 dbConn.Open();
-            }
-            catch
-            {
-
             }
             dbComm = new SqlCommand("sp_GetAgency", dbConn);
             dt = new DataTable();
@@ -259,47 +243,37 @@ namespace DAL
         }
         public int DeleteAgency(Agency agency)
         {
-            try
+            if (dbConn.State == ConnectionState.Closed)
             {
                 dbConn.Open();
-            }
-            catch
-            {
-
             }
             dbComm = new SqlCommand("sp_DeleteAgency", dbConn);
             dbComm.CommandType = CommandType.StoredProcedure;
 
             dbComm.Parameters.AddWithValue("@AgencyID", agency.AgencyID);
-            dbComm.Parameters.AddWithValue("@AgencyName", agency.AgencyName);
-            dbComm.Parameters.AddWithValue("@SuburbID", agency.SuburbID);
-
+           
 
             int x = dbComm.ExecuteNonQuery();
             dbConn.Close();
             return x;
         }
-        public int InsertAgent(Agent agent)
+        public int InsertAgent(Agent age)
         {
-            
-            try
+            if (dbConn.State == ConnectionState.Closed)
             {
                 dbConn.Open();
             }
-            catch
-            {
 
-            }
             dbComm = new SqlCommand("sp_InsertAgent", dbConn);
             dbComm.CommandType = CommandType.StoredProcedure;
 
-            dbComm.Parameters.AddWithValue("@AgentID", agent.AgentID);
-            dbComm.Parameters.AddWithValue("@Name", agent.Name);
-            dbComm.Parameters.AddWithValue("@Surname", agent.Surname);
-            dbComm.Parameters.AddWithValue("@Email", agent.Email);
-            dbComm.Parameters.AddWithValue("@Password", agent.Password);
-            dbComm.Parameters.AddWithValue("@Status", agent.Status);
-            dbComm.Parameters.AddWithValue("@AgencyID", agent.AgencyID);
+            
+            dbComm.Parameters.AddWithValue("@Name", age.Name);
+            dbComm.Parameters.AddWithValue("@Surname", age.Surname);
+            dbComm.Parameters.AddWithValue("@Email", age.Email);
+            dbComm.Parameters.AddWithValue("@Password", age.Password);
+            dbComm.Parameters.AddWithValue("@Status", age.Status);
+            dbComm.Parameters.AddWithValue("@AgencyID", age.AgencyID);
 
             int x = dbComm.ExecuteNonQuery();
             dbConn.Close();
@@ -323,14 +297,32 @@ namespace DAL
             {
                 dbConn.Open();
             }
-            
+
             dbComm = new SqlCommand("sp_UpdateAgent", dbConn);
             dbComm.CommandType = CommandType.StoredProcedure;
 
-            dbComm.Parameters.AddWithValue("@AgentID",age.AgentID);
+           
             dbComm.Parameters.AddWithValue("@Email", age.Email);
             dbComm.Parameters.AddWithValue("@Phone", age.Phone);
             dbComm.Parameters.AddWithValue("@Status", age.Status);
+
+            int x = dbComm.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+        }
+        public int DeleteAgent(Agent age)
+        {
+            if (dbConn.State == ConnectionState.Closed)
+            {
+                dbConn.Open();
+            }
+
+            string sql = "sp_DeleteAgent";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@AgentID", age.AgentID);
+
 
             int x = dbComm.ExecuteNonQuery();
             dbConn.Close();
@@ -379,6 +371,133 @@ namespace DAL
             return dt;
 
         }
+        public int InsertDetails(TenantD ten)
+        {
+            if (dbConn.State == ConnectionState.Closed)
+            {
+                dbConn.Open();
+            }
+            dbComm = new SqlCommand("sp_insertTenant", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
 
+
+            dbComm.Parameters.AddWithValue("@Name", ten.Name);
+            dbComm.Parameters.AddWithValue("@Surname", ten.Surname);
+            dbComm.Parameters.AddWithValue("@Email", ten.Email);
+            dbComm.Parameters.AddWithValue("@Password", ten.Password);
+            dbComm.Parameters.AddWithValue("@Phone", ten.Phone);
+            dbComm.Parameters.AddWithValue("@Status", ten.Status);
+
+
+            int x = dbComm.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+
+        }
+        public int UpdateTenant(TenantD ten)
+        {
+            if (dbConn.State == ConnectionState.Closed)
+            {
+                dbConn.Open();
+            }
+
+            string sql = "sp_UpdateTenant";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@TenantID", ten.TenantID);
+            dbComm.Parameters.AddWithValue("@Email", ten.Email);
+            dbComm.Parameters.AddWithValue("@Phone", ten.Phone);
+            dbComm.Parameters.AddWithValue("@Status", ten.Status);
+
+            int x = dbComm.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+        }
+        public int DeleteTenant(TenantD ten)
+        {
+            if (dbConn.State == ConnectionState.Closed)
+            {
+                dbConn.Open();
+            }
+
+            string sql = "sp_DeleteTenant";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@TenantID", ten.TenantID);
+
+
+            int x = dbComm.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+        }
+        public DataTable DisplayDetails()
+        {
+            if (dbConn.State == ConnectionState.Open)
+            {
+                dbConn.Open();
+            }
+            string sql = "SELECT* FROM tblTenant";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+        }
+        public int InsertRental(RentalD ren)
+        {
+            if (dbConn.State == ConnectionState.Closed)
+            {
+                dbConn.Open();
+            }
+            dbComm = new SqlCommand("sp_InsertRental", dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+
+            dbComm.Parameters.AddWithValue("@PropertAgentD", ren.PropertyAgentD);
+            dbComm.Parameters.AddWithValue("@TenantID", ren.TenantID);
+            dbComm.Parameters.AddWithValue("@StartDate", ren.StartDate);
+            dbComm.Parameters.AddWithValue("@EndDate", ren.EndDate);
+
+
+
+            int x = dbComm.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+        }
+        public DataTable DisplayRental()
+        {
+            if (dbConn.State == ConnectionState.Closed)
+            {
+                dbConn.Open();
+            }
+            string sql = "SELECT* FROM tblRental";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+        }
+        public int UpdateRental(RentalD ren)
+        {
+
+            if (dbConn.State == ConnectionState.Closed)
+            {
+                dbConn.Open();
+            }
+
+            string sql = "sp_UpdateRental";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+
+            dbComm.Parameters.AddWithValue("@StartDate", ren.StartDate);
+            dbComm.Parameters.AddWithValue("@EndDate", ren.EndDate);
+            int x = dbComm.ExecuteNonQuery();
+            dbConn.Close();
+            return x;
+        }
     }
 }

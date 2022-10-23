@@ -55,6 +55,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgentForm.Designer.cs">
+      <DependentUpon>AgentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CitiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CitiesForm.Designer.cs">
+      <DependentUpon>CitiesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +84,12 @@
     </Compile>
     <Compile Include="frmSuburb.designer.cs">
       <DependentUpon>frmSuburb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyAgentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertyAgentForm.Designer.cs">
+      <DependentUpon>PropertyAgentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PropertyTypefrm.cs">
       <SubType>Form</SubType>
@@ -105,6 +123,12 @@
     <Compile Include="Province.Designer.cs">
       <DependentUpon>Province.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgentForm.resx">
+      <DependentUpon>AgentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CitiesForm.resx">
+      <DependentUpon>CitiesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSuburb.resx">
       <DependentUpon>frmSuburb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertyAgentForm.resx">
+      <DependentUpon>PropertyAgentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PropertyTypefrm.resx">
       <DependentUpon>PropertyTypefrm.cs</DependentUpon>
