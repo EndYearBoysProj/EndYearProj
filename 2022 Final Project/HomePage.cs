@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,6 +44,27 @@ namespace _2022_Final_Project
         {
             Province pr = new Province();
             pr.Show();
+            this.Hide();
+        }
+
+        private void btnSuburb_Click(object sender, EventArgs e)
+        {
+            frmSuburb frm = new frmSuburb();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnAgency_Click(object sender, EventArgs e)
+        {
+            frmAgency frm = new frmAgency();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnAgents_Click(object sender, EventArgs e)
+        {
+            AgentForm frm = new AgentForm();
+            frm.Show();
             this.Hide();
         }
     }

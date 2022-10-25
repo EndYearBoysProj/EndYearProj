@@ -18,12 +18,12 @@ namespace _2022_Final_Project
         {
             InitializeComponent();
         }
-        BussinessLogicLayer bll=new BussinessLogicLayer();
+        BussinessLogicLayer bll = new BussinessLogicLayer();
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
-            PropertiesD pro=new PropertiesD();   
+            PropertiesD pro = new PropertiesD();
 
             pro.Description = txtDescription.Text;
             pro.Price = double.Parse(txtPrice.Text);
@@ -33,7 +33,7 @@ namespace _2022_Final_Project
             pro.SuburbID = int.Parse(cmbSuburbsID.Text);
 
             int x = bll.InsertProperty(pro);
-            if(x>0)
+            if (x > 0)
             {
                 MessageBox.Show("Your information has been added !");
             }
@@ -41,7 +41,7 @@ namespace _2022_Final_Project
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            PropertiesD p=new PropertiesD();
+            PropertiesD p = new PropertiesD();
 
             p.PropertyTypeID = int.Parse(txtPropertyTypeID.Text);
             p.Price = double.Parse(txtPrice.Text);
@@ -49,21 +49,21 @@ namespace _2022_Final_Project
             p.PropertyID = int.Parse(txtPropertyID.Text);
 
             int x = bll.UpdateProperty(p);
-                if(x>0)
+            if (x > 0)
             {
                 MessageBox.Show("You have updated your information");
             }
-            
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             PropertiesD d = new PropertiesD();
 
-            d.PropertyID= int.Parse(txtPropertyID.Text);
+            d.PropertyID = int.Parse(txtPropertyID.Text);
 
             int x = bll.DeleteProperty(d);
-            if (x>0)
+            if (x > 0)
             {
                 MessageBox.Show("Your information has been deleted");
             }
@@ -90,9 +90,18 @@ namespace _2022_Final_Project
         {
 
         }
-        
-        
-          
-        
+
+        private void dgvProperty_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvProperty.SelectedRows.Count > 0)
+            {
+                txtDescription.Text = dgvProperty.SelectedRows[0].Cells["Description"].Value.ToString();
+                txtPrice.Text = dgvProperty.SelectedRows[0].Cells["Price"].Value.ToString();
+                txtImage.Text = dgvProperty.SelectedRows[0].Cells["Image"].Value.ToString();
+                txtPropertyTypeID.Text = dgvProperty.SelectedRows[0].Cells["PropertyTypeID"].Value.ToString();
+                cmbStatus.Text = dgvProperty.SelectedRows[0].Cells["Status"].Value.ToString();
+                cmbSuburbsID.Text = dgvProperty.SelectedRows[0].Cells["SuburbsID"].Value.ToString();
+            }
+        }
     }
 }

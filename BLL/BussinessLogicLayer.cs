@@ -112,5 +112,33 @@ namespace BLL
         {
             return dal.GetPropAgent();
         }
+        public int InsertDetails(TenantD ten)
+        {
+            return dal.InsertDetails(ten);
+        }
+        public int UpdateTenant(TenantD ten)
+        {
+            return dal.UpdateTenant(ten);
+        }
+        public int DeleteTenant(TenantD ten)
+        {
+            return dal.DeleteTenant(ten);
+        }
+        public DataTable DisplayDetails()
+        {
+            return dal.DisplayDetails();
+        }
+        public int InsertRental(RentalD ren)
+        {
+            return dal.InsertRental(ren);
+        }
+        public int UpdateRental(RentalD ren)
+        {
+            return dal.UpdateRental(ren);
+        }
+        public DataTable DisplayRental()
+        {
+            return dal.DisplayRental();
+        }
     }
 }

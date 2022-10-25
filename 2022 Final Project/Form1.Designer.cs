@@ -73,6 +73,7 @@
             this.btnAgent.TabIndex = 2;
             this.btnAgent.Text = "Agent";
             this.btnAgent.UseVisualStyleBackColor = true;
+            this.btnAgent.Click += new System.EventHandler(this.btnAgent_Click);
             // 
             // btnTenant
             // 

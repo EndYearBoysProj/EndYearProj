@@ -16,5 +16,17 @@ namespace _2022_Final_Project
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            AgentHome ag = new AgentHome();
+            ag.Show();
+            this.Hide();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

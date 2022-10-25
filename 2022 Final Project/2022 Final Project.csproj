@@ -129,6 +129,18 @@
     <Compile Include="Province.Designer.cs">
       <DependentUpon>Province.cs</DependentUpon>
     </Compile>
+    <Compile Include="RentalFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentalFrm.Designer.cs">
+      <DependentUpon>RentalFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TenantFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TenantFrm.Designer.cs">
+      <DependentUpon>TenantFrm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AgentForm.resx">
       <DependentUpon>AgentForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +186,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Province.resx">
       <DependentUpon>Province.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RentalFrm.resx">
+      <DependentUpon>RentalFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TenantFrm.resx">
+      <DependentUpon>TenantFrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

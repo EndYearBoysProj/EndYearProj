@@ -28,5 +28,12 @@ namespace _2022_Final_Project
         {
 
         }
+
+        private void btnAgent_Click(object sender, EventArgs e)
+        {
+            AgentForm agentForm = new AgentForm();
+            agentForm.Show();
+            this.Hide();
+        }
     }
 }

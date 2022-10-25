@@ -81,8 +81,9 @@
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(100, 25);
             this.btnBack.TabIndex = 2;
-            this.btnBack.Text = "Back";
+            this.btnBack.Text = "Proceed";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnAdd
             // 
@@ -94,6 +95,7 @@
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
