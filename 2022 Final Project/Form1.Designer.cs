@@ -33,7 +33,9 @@
             this.btnAgent = new System.Windows.Forms.Button();
             this.btnTenant = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -41,16 +43,16 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(215, 48);
+            this.label1.Location = new System.Drawing.Point(143, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(391, 32);
+            this.label1.Size = new System.Drawing.Size(495, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to Property Central";
             // 
             // btnAdmin
             // 
             this.btnAdmin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmin.Location = new System.Drawing.Point(314, 181);
+            this.btnAdmin.Location = new System.Drawing.Point(40, 355);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(180, 61);
             this.btnAdmin.TabIndex = 1;
@@ -61,7 +63,7 @@
             // btnAgent
             // 
             this.btnAgent.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgent.Location = new System.Drawing.Point(314, 266);
+            this.btnAgent.Location = new System.Drawing.Point(327, 355);
             this.btnAgent.Name = "btnAgent";
             this.btnAgent.Size = new System.Drawing.Size(180, 61);
             this.btnAgent.TabIndex = 2;
@@ -71,7 +73,7 @@
             // btnTenant
             // 
             this.btnTenant.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTenant.Location = new System.Drawing.Point(314, 355);
+            this.btnTenant.Location = new System.Drawing.Point(595, 355);
             this.btnTenant.Name = "btnTenant";
             this.btnTenant.Size = new System.Drawing.Size(180, 61);
             this.btnTenant.TabIndex = 3;
@@ -88,12 +90,21 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(85, 178);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 485);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnTenant);
             this.Controls.Add(this.btnAgent);
@@ -103,6 +114,7 @@
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -114,6 +126,7 @@
         private System.Windows.Forms.Button btnAgent;
         private System.Windows.Forms.Button btnTenant;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -96,5 +96,21 @@ namespace BLL
         {
             return dal.GetProvince();
         }
+        public int InsertPropertyAgent(PropertyAgent proAge)
+        {
+            return dal.InsertPropertyAgent(proAge);
+        }
+        public int UpdatePropertyAgent(PropertyAgent proAge)
+        {
+            return dal.UpdatePropertyAgent(proAge);
+        }
+        public int DeletePropAgent(PropertyAgent proAge)
+        {
+            return dal.DeletePropAgent(proAge);
+        }
+        public DataTable GetPropAgent()
+        {
+            return dal.GetPropAgent();
+        }
     }
 }

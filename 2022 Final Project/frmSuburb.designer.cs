@@ -1,5 +1,4 @@
-﻿
-namespace ProjectForms
+﻿namespace _2022_Final_Project
 {
     partial class frmSuburb
     {
@@ -29,255 +28,160 @@ namespace ProjectForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.moreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.propertyTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.propertyTypeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.propertyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.propertyAgentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.propertyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.suburbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agencyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rawsonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.remaxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.justPropertyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tenantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rentalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dgvSuburb = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnDisplay = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.txtSuburb = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.menuStrip1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtSuburbID = new System.Windows.Forms.TextBox();
+            this.txtSuburbDesc = new System.Windows.Forms.TextBox();
+            this.txtCode = new System.Windows.Forms.TextBox();
+            this.cmbCityID = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSuburb)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // label1
             // 
-            this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.homeToolStripMenuItem,
-            this.moreToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(697, 30);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(40, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Suburb ID:";
             // 
-            // homeToolStripMenuItem
+            // label2
             // 
-            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(78, 26);
-            this.homeToolStripMenuItem.Text = "Home";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(40, 132);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 24);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "City ID:";
             // 
-            // moreToolStripMenuItem
+            // label3
             // 
-            this.moreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.propertyTypeToolStripMenuItem,
-            this.propertyToolStripMenuItem,
-            this.cityToolStripMenuItem,
-            this.suburbToolStripMenuItem,
-            this.agencyToolStripMenuItem,
-            this.agentToolStripMenuItem,
-            this.tenantToolStripMenuItem,
-            this.rentalToolStripMenuItem});
-            this.moreToolStripMenuItem.Name = "moreToolStripMenuItem";
-            this.moreToolStripMenuItem.Size = new System.Drawing.Size(71, 26);
-            this.moreToolStripMenuItem.Text = "More";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(40, 105);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 24);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Postal Code";
             // 
-            // propertyTypeToolStripMenuItem
+            // label4
             // 
-            this.propertyTypeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.propertyTypeToolStripMenuItem1,
-            this.propertyToolStripMenuItem1,
-            this.propertyAgentToolStripMenuItem});
-            this.propertyTypeToolStripMenuItem.Name = "propertyTypeToolStripMenuItem";
-            this.propertyTypeToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.propertyTypeToolStripMenuItem.Text = "Property";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(40, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(169, 24);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Suburb Description";
             // 
-            // propertyTypeToolStripMenuItem1
+            // dgvSuburb
             // 
-            this.propertyTypeToolStripMenuItem1.Name = "propertyTypeToolStripMenuItem1";
-            this.propertyTypeToolStripMenuItem1.Size = new System.Drawing.Size(236, 26);
-            this.propertyTypeToolStripMenuItem1.Text = "Property Type";
+            this.dgvSuburb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSuburb.Location = new System.Drawing.Point(12, 288);
+            this.dgvSuburb.Name = "dgvSuburb";
+            this.dgvSuburb.RowHeadersWidth = 51;
+            this.dgvSuburb.RowTemplate.Height = 24;
+            this.dgvSuburb.Size = new System.Drawing.Size(522, 150);
+            this.dgvSuburb.TabIndex = 4;
             // 
-            // propertyToolStripMenuItem1
+            // button1
             // 
-            this.propertyToolStripMenuItem1.Name = "propertyToolStripMenuItem1";
-            this.propertyToolStripMenuItem1.Size = new System.Drawing.Size(236, 26);
-            this.propertyToolStripMenuItem1.Text = "Property";
-            // 
-            // propertyAgentToolStripMenuItem
-            // 
-            this.propertyAgentToolStripMenuItem.Name = "propertyAgentToolStripMenuItem";
-            this.propertyAgentToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
-            this.propertyAgentToolStripMenuItem.Text = "Property Agent";
-            // 
-            // propertyToolStripMenuItem
-            // 
-            this.propertyToolStripMenuItem.Name = "propertyToolStripMenuItem";
-            this.propertyToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.propertyToolStripMenuItem.Text = "Province";
-            // 
-            // cityToolStripMenuItem
-            // 
-            this.cityToolStripMenuItem.Name = "cityToolStripMenuItem";
-            this.cityToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.cityToolStripMenuItem.Text = "City";
-            // 
-            // suburbToolStripMenuItem
-            // 
-            this.suburbToolStripMenuItem.Name = "suburbToolStripMenuItem";
-            this.suburbToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.suburbToolStripMenuItem.Text = "Suburb";
-            // 
-            // agencyToolStripMenuItem
-            // 
-            this.agencyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rawsonToolStripMenuItem,
-            this.remaxToolStripMenuItem,
-            this.justPropertyToolStripMenuItem});
-            this.agencyToolStripMenuItem.Name = "agencyToolStripMenuItem";
-            this.agencyToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.agencyToolStripMenuItem.Text = "Agency";
-            // 
-            // rawsonToolStripMenuItem
-            // 
-            this.rawsonToolStripMenuItem.Name = "rawsonToolStripMenuItem";
-            this.rawsonToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
-            this.rawsonToolStripMenuItem.Text = "Rawson";
-            // 
-            // remaxToolStripMenuItem
-            // 
-            this.remaxToolStripMenuItem.Name = "remaxToolStripMenuItem";
-            this.remaxToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
-            this.remaxToolStripMenuItem.Text = "Remax";
-            // 
-            // justPropertyToolStripMenuItem
-            // 
-            this.justPropertyToolStripMenuItem.Name = "justPropertyToolStripMenuItem";
-            this.justPropertyToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
-            this.justPropertyToolStripMenuItem.Text = "Just Property";
-            // 
-            // agentToolStripMenuItem
-            // 
-            this.agentToolStripMenuItem.Name = "agentToolStripMenuItem";
-            this.agentToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.agentToolStripMenuItem.Text = "Agent";
-            // 
-            // tenantToolStripMenuItem
-            // 
-            this.tenantToolStripMenuItem.Name = "tenantToolStripMenuItem";
-            this.tenantToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.tenantToolStripMenuItem.Text = "Tenant";
-            // 
-            // rentalToolStripMenuItem
-            // 
-            this.rentalToolStripMenuItem.Name = "rentalToolStripMenuItem";
-            this.rentalToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.rentalToolStripMenuItem.Text = "Rental";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.groupBox1.Controls.Add(this.btnDisplay);
-            this.groupBox1.Controls.Add(this.btnAdd);
-            this.groupBox1.Controls.Add(this.txtSuburb);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 31);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(672, 139);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Suburb";
+            this.button1.BackColor = System.Drawing.Color.Yellow;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(260, 233);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btnDisplay
             // 
             this.btnDisplay.BackColor = System.Drawing.Color.Yellow;
             this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDisplay.Location = new System.Drawing.Point(460, 78);
+            this.btnDisplay.Location = new System.Drawing.Point(459, 233);
             this.btnDisplay.Name = "btnDisplay";
-            this.btnDisplay.Size = new System.Drawing.Size(113, 28);
-            this.btnDisplay.TabIndex = 3;
+            this.btnDisplay.Size = new System.Drawing.Size(75, 23);
+            this.btnDisplay.TabIndex = 6;
             this.btnDisplay.Text = "Display";
             this.btnDisplay.UseVisualStyleBackColor = false;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Yellow;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(460, 34);
+            this.btnAdd.Location = new System.Drawing.Point(359, 233);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(113, 28);
-            this.btnAdd.TabIndex = 2;
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // txtSuburb
+            // txtSuburbID
             // 
-            this.txtSuburb.Location = new System.Drawing.Point(155, 58);
-            this.txtSuburb.Name = "txtSuburb";
-            this.txtSuburb.Size = new System.Drawing.Size(260, 30);
-            this.txtSuburb.TabIndex = 1;
+            this.txtSuburbID.Location = new System.Drawing.Point(260, 49);
+            this.txtSuburbID.Name = "txtSuburbID";
+            this.txtSuburbID.Size = new System.Drawing.Size(274, 22);
+            this.txtSuburbID.TabIndex = 8;
             // 
-            // label1
+            // txtSuburbDesc
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(22, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Enter Suburb:";
+            this.txtSuburbDesc.Location = new System.Drawing.Point(260, 78);
+            this.txtSuburbDesc.Name = "txtSuburbDesc";
+            this.txtSuburbDesc.Size = new System.Drawing.Size(274, 22);
+            this.txtSuburbDesc.TabIndex = 9;
             // 
-            // groupBox2
+            // txtCode
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 176);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(671, 270);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Suburb Details";
+            this.txtCode.Location = new System.Drawing.Point(260, 109);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(274, 22);
+            this.txtCode.TabIndex = 10;
             // 
-            // dataGridView1
+            // cmbCityID
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 33);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(639, 216);
-            this.dataGridView1.TabIndex = 0;
+            this.cmbCityID.FormattingEnabled = true;
+            this.cmbCityID.Location = new System.Drawing.Point(260, 138);
+            this.cmbCityID.Name = "cmbCityID";
+            this.cmbCityID.Size = new System.Drawing.Size(274, 24);
+            this.cmbCityID.TabIndex = 11;
             // 
             // frmSuburb
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(697, 461);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ClientSize = new System.Drawing.Size(562, 450);
+            this.Controls.Add(this.cmbCityID);
+            this.Controls.Add(this.txtCode);
+            this.Controls.Add(this.txtSuburbDesc);
+            this.Controls.Add(this.txtSuburbID);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnDisplay);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dgvSuburb);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Name = "frmSuburb";
-            this.Text = "Suburb";
-            this.Load += new System.EventHandler(this.frmSuburb_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "frmSuburb";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSuburb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,29 +189,17 @@ namespace ProjectForms
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem moreToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem propertyTypeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem propertyTypeToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem propertyToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem propertyAgentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem propertyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cityToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem suburbToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agencyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rawsonToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem remaxToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem justPropertyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tenantToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rentalToolStripMenuItem;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dgvSuburb;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnDisplay;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox txtSuburb;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtSuburbID;
+        private System.Windows.Forms.TextBox txtSuburbDesc;
+        private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.ComboBox cmbCityID;
     }
 }

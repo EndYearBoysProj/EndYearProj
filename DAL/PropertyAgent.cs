@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal class PropertyAgent
+    public class PropertyAgent
     {
         public int PropertyAgentID { get; set; }
         public int PropertyID { get; set; }

@@ -82,7 +82,7 @@
     <Compile Include="frmSuburb.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSuburb.designer.cs">
+    <Compile Include="frmSuburb.Designer.cs">
       <DependentUpon>frmSuburb.cs</DependentUpon>
     </Compile>
     <Compile Include="PropertyAgentForm.cs">

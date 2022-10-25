@@ -10,7 +10,7 @@ namespace DAL
     {
         public int SuburbID { get; set; }
         public string SuburbDescription { get; set; }
-        public int PostalCode { get; set; }
+        public string PostalCode { get; set; }
         public int CityID { get; set; }
 
 
