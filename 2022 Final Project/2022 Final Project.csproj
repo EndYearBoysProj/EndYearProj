@@ -61,6 +61,12 @@
     <Compile Include="AgentForm.Designer.cs">
       <DependentUpon>AgentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgentHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgentHome.Designer.cs">
+      <DependentUpon>AgentHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="CitiesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     <EmbeddedResource Include="AgentForm.resx">
       <DependentUpon>AgentForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgentHome.resx">
+      <DependentUpon>AgentHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CitiesForm.resx">
       <DependentUpon>CitiesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +167,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="PropertyFrm.resx">
       <DependentUpon>PropertyFrm.cs</DependentUpon>
@@ -177,6 +187,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admin picture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agent.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tenant.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
