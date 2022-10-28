@@ -141,6 +141,12 @@
     <Compile Include="RentalFrm.Designer.cs">
       <DependentUpon>RentalFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RentalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentalReport.Designer.cs">
+      <DependentUpon>RentalReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="TenantFrm.cs">
       <SubType>Form</SubType>
     </Compile>
