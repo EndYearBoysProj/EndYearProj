@@ -31,8 +31,15 @@ namespace _2022_Final_Project
 
         private void btnAgent_Click(object sender, EventArgs e)
         {
-            AgentForm agentForm = new AgentForm();
-            agentForm.Show();
+            AgentLoginfrm agentLoginfrm = new AgentLoginfrm();
+            agentLoginfrm.Show();
+            this.Hide();
+        }
+
+        private void btnTenant_Click(object sender, EventArgs e)
+        {
+            TenantFrm tf = new TenantFrm();
+            tf.Show();
             this.Hide();
         }
     }

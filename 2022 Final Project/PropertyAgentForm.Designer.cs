@@ -36,11 +36,11 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnDisplay = new System.Windows.Forms.Button();
             this.txtPropertyAgentID = new System.Windows.Forms.TextBox();
-            this.txtDate = new System.Windows.Forms.TextBox();
             this.cmbPropID = new System.Windows.Forms.ComboBox();
             this.cmbAgentID = new System.Windows.Forms.ComboBox();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropAgentForm)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +53,8 @@
             this.dgvPropAgentForm.RowTemplate.Height = 24;
             this.dgvPropAgentForm.Size = new System.Drawing.Size(464, 150);
             this.dgvPropAgentForm.TabIndex = 0;
+            this.dgvPropAgentForm.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPropAgentForm_CellClick);
+            this.dgvPropAgentForm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPropAgentForm_CellContentClick);
             // 
             // label1
             // 
@@ -119,6 +121,7 @@
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -130,17 +133,19 @@
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnDelete
+            // btnDisplay
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Yellow;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(401, 232);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 8;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDisplay.BackColor = System.Drawing.Color.Yellow;
+            this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDisplay.Location = new System.Drawing.Point(401, 232);
+            this.btnDisplay.Name = "btnDisplay";
+            this.btnDisplay.Size = new System.Drawing.Size(75, 23);
+            this.btnDisplay.TabIndex = 8;
+            this.btnDisplay.Text = "Dsiplay";
+            this.btnDisplay.UseVisualStyleBackColor = false;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
             // txtPropertyAgentID
             // 
@@ -148,13 +153,6 @@
             this.txtPropertyAgentID.Name = "txtPropertyAgentID";
             this.txtPropertyAgentID.Size = new System.Drawing.Size(214, 22);
             this.txtPropertyAgentID.TabIndex = 9;
-            // 
-            // txtDate
-            // 
-            this.txtDate.Location = new System.Drawing.Point(262, 175);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(214, 22);
-            this.txtDate.TabIndex = 10;
             // 
             // cmbPropID
             // 
@@ -172,17 +170,24 @@
             this.cmbAgentID.Size = new System.Drawing.Size(214, 24);
             this.cmbAgentID.TabIndex = 12;
             // 
+            // dtpDate
+            // 
+            this.dtpDate.Location = new System.Drawing.Point(262, 173);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(200, 22);
+            this.dtpDate.TabIndex = 13;
+            // 
             // PropertyAgentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(520, 450);
+            this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.cmbAgentID);
             this.Controls.Add(this.cmbPropID);
-            this.Controls.Add(this.txtDate);
             this.Controls.Add(this.txtPropertyAgentID);
-            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnDisplay);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnBack);
@@ -209,10 +214,10 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnDisplay;
         private System.Windows.Forms.TextBox txtPropertyAgentID;
-        private System.Windows.Forms.TextBox txtDate;
         private System.Windows.Forms.ComboBox cmbPropID;
         private System.Windows.Forms.ComboBox cmbAgentID;
+        private System.Windows.Forms.DateTimePicker dtpDate;
     }
 }

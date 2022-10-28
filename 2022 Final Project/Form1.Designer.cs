@@ -84,6 +84,7 @@
             this.btnTenant.TabIndex = 3;
             this.btnTenant.Text = "Tenant";
             this.btnTenant.UseVisualStyleBackColor = true;
+            this.btnTenant.Click += new System.EventHandler(this.btnTenant_Click);
             // 
             // groupBox1
             // 

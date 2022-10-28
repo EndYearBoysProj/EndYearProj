@@ -57,25 +57,16 @@ namespace _2022_Final_Project
 
         private void dgvTenant_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvTenant.SelectedRows.Count > 0)
-            {
-                txtID.Text = dgvTenant.SelectedRows[0].Cells["TenantID"].Value.ToString();
-                txtTenantName.Text = dgvTenant.SelectedRows[0].Cells["Name"].Value.ToString();
-                txtTenantSurname.Text = dgvTenant.SelectedRows[0].Cells["Surname"].Value.ToString();
-                txtTenantEmail.Text = dgvTenant.SelectedRows[0].Cells["Email"].Value.ToString();
-                txtTenantPassword.Text = dgvTenant.SelectedRows[0].Cells["Password"].Value.ToString();
-                txtTenantNo.Text = dgvTenant.SelectedRows[0].Cells["Phone"].Value.ToString();
 
-            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            TenantD tenant = new TenantD();
 
-            tenant.TenantID = int.Parse(txtID.Text);
+            TenantD tde = new TenantD();
+            tde.TenantID = int.Parse(txtID.Text);
 
-            int x = bll.DeleteTenant(tenant);
+            int x = bll.DeleteTenant(tde);
 
             if (x > 0)
             {
@@ -86,6 +77,11 @@ namespace _2022_Final_Project
         private void btnDisplay_Click(object sender, EventArgs e)
         {
             dgvTenant.DataSource = bll.DisplayDetails();
+        }
+
+        private void dgvTenant_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtID.Text = dgvTenant.SelectedRows[0].Cells["TenantID"].Value.ToString();
         }
     }
 }

@@ -16,6 +16,10 @@ namespace BLL
         {
             return dal.Login(email, password);
         }
+        public DataTable AgentLogin(string email, string password)
+        {
+            return dal.AgentLogin(email, password);
+        }
         public int InsertPropertyType(PropertyType type)
         {
             return dal.InsertPropertyType(type);

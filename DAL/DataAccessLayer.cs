@@ -32,6 +32,21 @@ namespace DAL
             dbAdapter.Fill(dt);
             return dt;
         }
+        public DataTable AgentLogin(string email, string password)
+        {
+            dbConn.Open();
+
+            string sql = "sp_AgentLogin";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbComm.CommandType = CommandType.StoredProcedure;
+            dbComm.Parameters.AddWithValue("@Email", email);
+            dbComm.Parameters.AddWithValue("@Password", password);
+
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            return dt;
+        }
         public int InsertPropertyType(PropertyType type)
         {
             if (dbConn.State == ConnectionState.Closed)
@@ -174,18 +189,14 @@ namespace DAL
         }
         public int InsertSuburb(Suburb suburb)
         {
-            try
+            if (dbConn.State == ConnectionState.Closed)
             {
                 dbConn.Open();
-            }
-            catch
-            {
-
             }
             dbComm = new SqlCommand("sp_InsertSuburb", dbConn);
             dbComm.CommandType = CommandType.StoredProcedure;
 
-            dbComm.Parameters.AddWithValue("@SuburbID", suburb.SuburbID);
+            
             dbComm.Parameters.AddWithValue("@SuburbDescription", suburb.SuburbDescription);
             dbComm.Parameters.AddWithValue("@PostalCode", suburb.PostalCode);
             dbComm.Parameters.AddWithValue("@CityID", suburb.CityID);
@@ -196,15 +207,11 @@ namespace DAL
         }
         public DataTable GetSuburb()
         {
-            try
+            if (dbConn.State == ConnectionState.Closed)
             {
                 dbConn.Open();
             }
-            catch
-            {
-
-            }
-            dbComm = new SqlCommand("sp_GetSurburb", dbConn);
+            dbComm = new SqlCommand("sp_GetSuburb", dbConn);
             dt = new DataTable();
             dbAdapter = new SqlDataAdapter(dbComm);
             dbAdapter.Fill(dt);
@@ -533,6 +540,7 @@ namespace DAL
             dbComm = new SqlCommand(sql, dbConn);
             dbComm.CommandType = CommandType.StoredProcedure;
 
+            dbComm.Parameters.AddWithValue("@PropertyAgentID", proAge.PropertyAgentID);
             dbComm.Parameters.AddWithValue("@PropertyID", proAge.PropertyID);
             dbComm.Parameters.AddWithValue("@AgentID", proAge.AgentID);
             dbComm.Parameters.AddWithValue("@Date", proAge.Date);

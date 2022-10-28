@@ -37,5 +37,12 @@ namespace _2022_Final_Project
         {
             dgvProvince.DataSource = bll.GetProvince();
         }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            HomePage hm = new HomePage();
+            hm.Show();
+            this.Hide();
+        }
     }
 }

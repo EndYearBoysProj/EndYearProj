@@ -247,7 +247,8 @@
             this.dgvTenant.RowTemplate.Height = 24;
             this.dgvTenant.Size = new System.Drawing.Size(693, 180);
             this.dgvTenant.TabIndex = 20;
-            this.dgvTenant.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTenant_CellContentClick);
+            this.dgvTenant.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTenant_CellClick);
+            this.dgvTenant.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTenant_CellClick);
             // 
             // TenantFrm
             // 

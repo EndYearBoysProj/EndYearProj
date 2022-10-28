@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,33 +8,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using BLL;
 
 namespace _2022_Final_Project
 {
-    public partial class LoginForm : Form
+    public partial class AgentLoginfrm : Form
     {
-        public LoginForm()
+        public AgentLoginfrm()
         {
             InitializeComponent();
         }
-         
+
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             BussinessLogicLayer bll = new BussinessLogicLayer();
 
-            DataTable dt = bll.Login(txtEmail.Text, txtPassword.Text);
-            if(dt.Rows.Count > 0)
+            DataTable dt = bll.AgentLogin(txtEmail.Text, txtPassword.Text);
+            if (dt.Rows.Count > 0)
             {
-                HomePage home=new HomePage();
+                AgentHome home = new AgentHome();
                 home.Show();
                 this.Hide();
             }
             else
             {
-                label4.ForeColor = Color.Red;
-                label4.Text = "Enter the correct credentials";
+                label1.ForeColor = Color.Red;
+                label1.Text = "Enter the correct credentials";
             }
             if (string.IsNullOrEmpty(txtEmail.Text))
             {
@@ -60,11 +59,6 @@ namespace _2022_Final_Project
             Form1 frm = new Form1();
             frm.Show();
             this.Hide();
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -24,8 +24,8 @@ namespace _2022_Final_Project
         {
             RentalD rn = new RentalD();
 
-            rn.PropertyAgentD = int.Parse(txtPropertyAgentID.Text);
-            rn.TenantID = int.Parse(txtTenantID.Text);
+            rn.PropertyAgentD = int.Parse(cmbPropAgentID.Text);
+            rn.TenantID = int.Parse(cmbTenantID.Text);
             rn.StartDate = dtpStartDate.Text;
             rn.EndDate = dtpEndDate.Text;
 
@@ -57,6 +57,21 @@ namespace _2022_Final_Project
         private void btnDisplayRental_Click(object sender, EventArgs e)
         {
             dgvRental.DataSource = bll.DisplayRental();
+        }
+
+        private void dgvRental_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvRental.SelectedRows.Count > 0)
+            {
+                txtRentalID.Text = dgvRental.SelectedRows[0].Cells["RentalID"].Value.ToString();
+               
+
+            }
+        }
+
+        private void dgvRental_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

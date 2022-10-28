@@ -42,5 +42,12 @@ namespace _2022_Final_Project
         {
             dgvSuburb.DataSource = bll.GetSuburb();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HomePage h = new HomePage();
+            h.Show();
+            this.Hide();
+        }
     }
 }

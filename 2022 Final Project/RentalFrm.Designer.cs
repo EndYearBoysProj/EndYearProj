@@ -30,8 +30,6 @@
         {
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
-            this.txtTenantID = new System.Windows.Forms.TextBox();
-            this.txtPropertyAgentID = new System.Windows.Forms.TextBox();
             this.txtRentalID = new System.Windows.Forms.TextBox();
             this.dgvRental = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,6 +40,8 @@
             this.btnUpdateRental = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmbPropAgentID = new System.Windows.Forms.ComboBox();
+            this.cmbTenantID = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRental)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,20 +59,6 @@
             this.dtpStartDate.Size = new System.Drawing.Size(200, 22);
             this.dtpStartDate.TabIndex = 26;
             // 
-            // txtTenantID
-            // 
-            this.txtTenantID.Location = new System.Drawing.Point(212, 126);
-            this.txtTenantID.Name = "txtTenantID";
-            this.txtTenantID.Size = new System.Drawing.Size(449, 22);
-            this.txtTenantID.TabIndex = 25;
-            // 
-            // txtPropertyAgentID
-            // 
-            this.txtPropertyAgentID.Location = new System.Drawing.Point(212, 78);
-            this.txtPropertyAgentID.Name = "txtPropertyAgentID";
-            this.txtPropertyAgentID.Size = new System.Drawing.Size(449, 22);
-            this.txtPropertyAgentID.TabIndex = 24;
-            // 
             // txtRentalID
             // 
             this.txtRentalID.Location = new System.Drawing.Point(212, 26);
@@ -89,6 +75,8 @@
             this.dgvRental.RowTemplate.Height = 24;
             this.dgvRental.Size = new System.Drawing.Size(652, 155);
             this.dgvRental.TabIndex = 22;
+            this.dgvRental.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRental_CellClick);
+            this.dgvRental.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRental_CellContentClick);
             // 
             // label5
             // 
@@ -181,16 +169,32 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Rental ID:";
             // 
+            // cmbPropAgentID
+            // 
+            this.cmbPropAgentID.FormattingEnabled = true;
+            this.cmbPropAgentID.Location = new System.Drawing.Point(212, 77);
+            this.cmbPropAgentID.Name = "cmbPropAgentID";
+            this.cmbPropAgentID.Size = new System.Drawing.Size(449, 24);
+            this.cmbPropAgentID.TabIndex = 28;
+            // 
+            // cmbTenantID
+            // 
+            this.cmbTenantID.FormattingEnabled = true;
+            this.cmbTenantID.Location = new System.Drawing.Point(212, 125);
+            this.cmbTenantID.Name = "cmbTenantID";
+            this.cmbTenantID.Size = new System.Drawing.Size(449, 24);
+            this.cmbTenantID.TabIndex = 29;
+            // 
             // RentalFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(681, 450);
+            this.Controls.Add(this.cmbTenantID);
+            this.Controls.Add(this.cmbPropAgentID);
             this.Controls.Add(this.dtpEndDate);
             this.Controls.Add(this.dtpStartDate);
-            this.Controls.Add(this.txtTenantID);
-            this.Controls.Add(this.txtPropertyAgentID);
             this.Controls.Add(this.txtRentalID);
             this.Controls.Add(this.dgvRental);
             this.Controls.Add(this.label5);
@@ -213,8 +217,6 @@
 
         private System.Windows.Forms.DateTimePicker dtpEndDate;
         private System.Windows.Forms.DateTimePicker dtpStartDate;
-        private System.Windows.Forms.TextBox txtTenantID;
-        private System.Windows.Forms.TextBox txtPropertyAgentID;
         private System.Windows.Forms.TextBox txtRentalID;
         private System.Windows.Forms.DataGridView dgvRental;
         private System.Windows.Forms.Label label5;
@@ -225,5 +227,7 @@
         private System.Windows.Forms.Button btnUpdateRental;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbPropAgentID;
+        private System.Windows.Forms.ComboBox cmbTenantID;
     }
 }

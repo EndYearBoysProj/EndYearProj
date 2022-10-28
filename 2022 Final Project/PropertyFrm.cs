@@ -28,7 +28,7 @@ namespace _2022_Final_Project
             pro.Description = txtDescription.Text;
             pro.Price = double.Parse(txtPrice.Text);
             pro.Image = txtImage.Text;
-            pro.PropertyTypeID = int.Parse(txtPropertyTypeID.Text);
+            pro.PropertyTypeID = int.Parse(cmbPropertyTypeID.Text);
             pro.Status = cmbStatus.Text;
             pro.SuburbID = int.Parse(cmbSuburbsID.Text);
 
@@ -43,7 +43,7 @@ namespace _2022_Final_Project
         {
             PropertiesD p = new PropertiesD();
 
-            p.PropertyTypeID = int.Parse(txtPropertyTypeID.Text);
+            p.PropertyTypeID = int.Parse(cmbPropertyTypeID.Text);
             p.Price = double.Parse(txtPrice.Text);
             p.Status = cmbStatus.Text;
             p.PropertyID = int.Parse(txtPropertyID.Text);
@@ -58,11 +58,11 @@ namespace _2022_Final_Project
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            PropertiesD d = new PropertiesD();
+            PropertiesD de = new PropertiesD();
 
-            d.PropertyID = int.Parse(txtPropertyID.Text);
+            de.PropertyID = int.Parse(txtPropertyID.Text);
 
-            int x = bll.DeleteProperty(d);
+            int x = bll.DeleteProperty(de);
             if (x > 0)
             {
                 MessageBox.Show("Your information has been deleted");
@@ -95,10 +95,11 @@ namespace _2022_Final_Project
         {
             if (dgvProperty.SelectedRows.Count > 0)
             {
+                txtPropertyID.Text = dgvProperty.SelectedRows[0].Cells["PropertyID"].Value.ToString();
                 txtDescription.Text = dgvProperty.SelectedRows[0].Cells["Description"].Value.ToString();
                 txtPrice.Text = dgvProperty.SelectedRows[0].Cells["Price"].Value.ToString();
                 txtImage.Text = dgvProperty.SelectedRows[0].Cells["Image"].Value.ToString();
-                txtPropertyTypeID.Text = dgvProperty.SelectedRows[0].Cells["PropertyTypeID"].Value.ToString();
+                cmbPropertyTypeID.Text = dgvProperty.SelectedRows[0].Cells["PropertyTypeID"].Value.ToString();
                 cmbStatus.Text = dgvProperty.SelectedRows[0].Cells["Status"].Value.ToString();
                 cmbSuburbsID.Text = dgvProperty.SelectedRows[0].Cells["SuburbsID"].Value.ToString();
             }

@@ -37,7 +37,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtPropertyID = new System.Windows.Forms.TextBox();
-            this.txtPropertyTypeID = new System.Windows.Forms.TextBox();
             this.txtImage = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
@@ -48,6 +47,7 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.cmbSuburbsID = new System.Windows.Forms.ComboBox();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.cmbPropertyTypeID = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProperty)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,13 +147,6 @@
             this.txtPropertyID.ReadOnly = true;
             this.txtPropertyID.Size = new System.Drawing.Size(350, 22);
             this.txtPropertyID.TabIndex = 8;
-            // 
-            // txtPropertyTypeID
-            // 
-            this.txtPropertyTypeID.Location = new System.Drawing.Point(438, 147);
-            this.txtPropertyTypeID.Name = "txtPropertyTypeID";
-            this.txtPropertyTypeID.Size = new System.Drawing.Size(350, 22);
-            this.txtPropertyTypeID.TabIndex = 12;
             // 
             // txtImage
             // 
@@ -267,12 +260,26 @@
             this.cmbStatus.TabIndex = 22;
             this.cmbStatus.SelectedIndexChanged += new System.EventHandler(this.cmbStatus_SelectedIndexChanged);
             // 
+            // cmbPropertyTypeID
+            // 
+            this.cmbPropertyTypeID.FormattingEnabled = true;
+            this.cmbPropertyTypeID.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cmbPropertyTypeID.Location = new System.Drawing.Point(438, 145);
+            this.cmbPropertyTypeID.Name = "cmbPropertyTypeID";
+            this.cmbPropertyTypeID.Size = new System.Drawing.Size(350, 24);
+            this.cmbPropertyTypeID.TabIndex = 23;
+            // 
             // PropertyFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbPropertyTypeID);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.cmbSuburbsID);
             this.Controls.Add(this.btnBack);
@@ -283,7 +290,6 @@
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtImage);
-            this.Controls.Add(this.txtPropertyTypeID);
             this.Controls.Add(this.txtPropertyID);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -313,7 +319,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtPropertyID;
-        private System.Windows.Forms.TextBox txtPropertyTypeID;
         private System.Windows.Forms.TextBox txtImage;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtDescription;
@@ -324,5 +329,6 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.ComboBox cmbSuburbsID;
         private System.Windows.Forms.ComboBox cmbStatus;
+        private System.Windows.Forms.ComboBox cmbPropertyTypeID;
     }
 }
