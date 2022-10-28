@@ -80,5 +80,12 @@ namespace _2022_Final_Project
             ago.Show();
             this.Hide();
         }
+
+        private void rentalReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RentalReport rep = new RentalReport();
+            rep.Show();
+            this.Hide();
+        }
     }
 }

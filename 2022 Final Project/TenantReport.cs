@@ -7,20 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace _2022_Final_Project
 {
-    public partial class RentalReport : Form
+    public partial class TenantReport : Form
     {
-        public RentalReport()
+        public TenantReport()
         {
             InitializeComponent();
+        }
+         BussinessLogicLayer bll = new BussinessLogicLayer();
+
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            dgvTenantRepo.DataSource = bll.DisplayDetails();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            RentalFrm rf = new RentalFrm();
-            rf.Show();
+            TenantFrm tf = new TenantFrm();
+            tf.Show();
             this.Hide();
         }
     }

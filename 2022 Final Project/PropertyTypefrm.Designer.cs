@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnAddType = new System.Windows.Forms.Button();
             this.dgvType = new System.Windows.Forms.DataGridView();
             this.btnDisplay = new System.Windows.Forms.Button();
@@ -36,14 +37,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.cmbPropDescription = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvType)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddType
             // 
             this.btnAddType.BackColor = System.Drawing.Color.Yellow;
             this.btnAddType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddType.Location = new System.Drawing.Point(279, 235);
+            this.btnAddType.Location = new System.Drawing.Point(466, 190);
             this.btnAddType.Name = "btnAddType";
             this.btnAddType.Size = new System.Drawing.Size(120, 30);
             this.btnAddType.TabIndex = 0;
@@ -54,18 +59,18 @@
             // dgvType
             // 
             this.dgvType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvType.Location = new System.Drawing.Point(6, 289);
+            this.dgvType.Location = new System.Drawing.Point(6, 21);
             this.dgvType.Name = "dgvType";
             this.dgvType.RowHeadersWidth = 51;
             this.dgvType.RowTemplate.Height = 24;
-            this.dgvType.Size = new System.Drawing.Size(580, 142);
+            this.dgvType.Size = new System.Drawing.Size(576, 121);
             this.dgvType.TabIndex = 1;
             // 
             // btnDisplay
             // 
             this.btnDisplay.BackColor = System.Drawing.Color.Yellow;
             this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDisplay.Location = new System.Drawing.Point(419, 235);
+            this.btnDisplay.Location = new System.Drawing.Point(20, 148);
             this.btnDisplay.Name = "btnDisplay";
             this.btnDisplay.Size = new System.Drawing.Size(120, 30);
             this.btnDisplay.TabIndex = 3;
@@ -108,7 +113,7 @@
             // 
             this.btnBack.BackColor = System.Drawing.Color.Yellow;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(143, 235);
+            this.btnBack.Location = new System.Drawing.Point(330, 190);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(120, 30);
             this.btnBack.TabIndex = 7;
@@ -129,24 +134,41 @@
             this.cmbPropDescription.Size = new System.Drawing.Size(307, 24);
             this.cmbPropDescription.TabIndex = 8;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.dgvType);
+            this.groupBox1.Controls.Add(this.btnDisplay);
+            this.groupBox1.Location = new System.Drawing.Point(12, 244);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(588, 194);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Property Type Reports";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // PropertyTypefrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(612, 450);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cmbPropDescription);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.btnDisplay);
-            this.Controls.Add(this.dgvType);
             this.Controls.Add(this.btnAddType);
             this.Name = "PropertyTypefrm";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.PropertyTypefrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvType)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,5 +184,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.ComboBox cmbPropDescription;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

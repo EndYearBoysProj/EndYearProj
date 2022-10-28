@@ -144,5 +144,13 @@ namespace BLL
         {
             return dal.DisplayRental();
         }
+        public DataTable GetPropReports()
+        {
+            return dal.GetPropReports();
+        }
+        public DataTable GetAgencyReports()
+        {
+            return dal.GetAgencyReports();
+        }
     }
 }

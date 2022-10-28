@@ -44,6 +44,61 @@ namespace _2022_Final_Project
             {
                 MessageBox.Show("Your information has been added !");
             }
+            if (string.IsNullOrEmpty(txtName.Text))
+            {
+                errorProvider1.SetError(txtName, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtName, string.Empty);
+            }
+            if (string.IsNullOrEmpty(txtSurname.Text))
+            {
+                errorProvider2.SetError(txtSurname, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider2.SetError(txtSurname, string.Empty);
+            }
+            if (string.IsNullOrEmpty(txtEmail.Text))
+            {
+                errorProvider3.SetError(txtEmail, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider3.SetError(txtEmail, string.Empty);
+            }
+            if (string.IsNullOrEmpty(txtPassword.Text))
+            {
+                errorProvider4.SetError(txtPassword, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider4.SetError(txtPassword, string.Empty);
+            }
+            if (string.IsNullOrEmpty(txtPhone.Text))
+            {
+                errorProvider5.SetError(txtPhone, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider5.SetError(txtPhone, string.Empty);
+            }
+            if (string.IsNullOrEmpty(cmbStatus.Text))
+            {
+                errorProvider6.SetError(cmbStatus, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider6.SetError(cmbStatus, string.Empty);
+            }
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -95,6 +150,11 @@ namespace _2022_Final_Project
             dgvAgent.DataSource = bll.GetAgent();
         }
 
-       
+        private void agentReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgentReports agr = new AgentReports();
+            agr.Show();
+            this.Hide();
+        }
     }
 }

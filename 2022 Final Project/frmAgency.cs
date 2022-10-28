@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
 using BLL;
+using _2022_Final_Project;
 
 namespace ProjectForms
 {
@@ -32,6 +33,24 @@ namespace ProjectForms
             if (x > 0)
             {
                 MessageBox.Show(x + "Agency Added.");
+            }
+            if (string.IsNullOrEmpty(txtAgencyName.Text))
+            {
+                errorProvider1.SetError(txtAgencyName, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtAgencyName, string.Empty);
+            }
+            if (string.IsNullOrEmpty(cmbSuburbID.Text))
+            {
+                errorProvider2.SetError(cmbSuburbID, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider2.SetError(cmbSuburbID, string.Empty);
             }
 
         }
@@ -62,6 +81,20 @@ namespace ProjectForms
         private void dgvAgency_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtAgencyID.Text = dgvAgency.SelectedRows[0].Cells["AgencyID"].Value.ToString();
+        }
+
+        private void agencyReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgencyReports ar = new AgencyReports();
+            ar.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HomePage hp = new HomePage();
+            hp.Show();
+            this.Hide();
         }
     }
 }

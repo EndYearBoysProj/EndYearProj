@@ -35,6 +35,24 @@ namespace _2022_Final_Project
             {
                 MessageBox.Show("Your information has been added !");
             }
+            if (string.IsNullOrEmpty(txtSuburbDesc.Text))
+            {
+                errorProvider1.SetError(txtSuburbDesc, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtSuburbDesc, string.Empty);
+            }
+            if (string.IsNullOrEmpty(txtCode.Text))
+            {
+                errorProvider1.SetError(txtCode, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtCode, string.Empty);
+            }
 
         }
 
@@ -47,6 +65,13 @@ namespace _2022_Final_Project
         {
             HomePage h = new HomePage();
             h.Show();
+            this.Hide();
+        }
+
+        private void suburbReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SuburbReports su = new SuburbReports();
+            su.Show();
             this.Hide();
         }
     }

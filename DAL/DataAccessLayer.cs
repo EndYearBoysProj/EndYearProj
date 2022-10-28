@@ -583,6 +583,34 @@ namespace DAL
             dbConn.Close();
             return dt;
         }
+        public DataTable GetPropReports()
+        {
+            if (dbConn.State == ConnectionState.Open)
+            {
+                dbConn.Open();
+            }
+            string sql = "sp_PropReports";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+        }
+        public DataTable GetAgencyReports()
+        {
+            if (dbConn.State == ConnectionState.Open)
+            {
+                dbConn.Open();
+            }
+            string sql = "sp_AgencyReports";
+            dbComm = new SqlCommand(sql, dbConn);
+            dbAdapter = new SqlDataAdapter(dbComm);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+            dbConn.Close();
+            return dt;
+        }
     } 
    
 

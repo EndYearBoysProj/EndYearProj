@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.btnAgentD = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnRentals = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -50,32 +48,6 @@
             this.btnAgentD.Text = "Agent Details";
             this.btnAgentD.UseVisualStyleBackColor = false;
             this.btnAgentD.Click += new System.EventHandler(this.btnAgentD_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Yellow;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(43, 250);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 35);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Property Frm";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Yellow;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(43, 197);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 35);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Property Type";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -107,9 +79,9 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(202, 43);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(563, 361);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
@@ -118,8 +90,8 @@
             // 
             this.button6.BackColor = System.Drawing.Color.Yellow;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(43, 304);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Location = new System.Drawing.Point(43, 195);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(125, 35);
             this.button6.TabIndex = 6;
@@ -132,7 +104,7 @@
             this.button7.BackColor = System.Drawing.Color.Yellow;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Location = new System.Drawing.Point(43, 384);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(125, 35);
             this.button7.TabIndex = 7;
@@ -151,8 +123,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnRentals);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnAgentD);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AgentHome";
@@ -164,8 +134,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnAgentD;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnRentals;
         private System.Windows.Forms.GroupBox groupBox1;

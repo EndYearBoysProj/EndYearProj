@@ -99,5 +99,17 @@ namespace _2022_Final_Project
         {
             txtPropertyID.Text = dgvProperty.SelectedRows[0].Cells["PropertyID"].Value.ToString();
         }
+
+        private void propertReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PropertyReportcs pr = new PropertyReportcs();
+            pr.Show();
+            this.Hide();
+        }
     }
 }

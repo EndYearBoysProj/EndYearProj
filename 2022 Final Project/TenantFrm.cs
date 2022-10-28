@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using BLL;
 using DAL;
 namespace _2022_Final_Project
@@ -34,6 +35,64 @@ namespace _2022_Final_Project
             if (x > 0)
             {
                 MessageBox.Show("Your information has been added !");
+            }
+            if (x > 0)
+            {
+                MessageBox.Show("Your information has been added !");
+            }
+            if (string.IsNullOrEmpty(txtTenantName.Text))
+            {
+                errorProvider1.SetError(txtTenantName, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtTenantName, string.Empty);
+            }
+            if (string.IsNullOrEmpty(txtTenantSurname.Text))
+            {
+                errorProvider2.SetError(txtTenantSurname, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider2.SetError(txtTenantSurname, string.Empty);
+            }
+            if (string.IsNullOrEmpty(txtTenantEmail.Text))
+            {
+                errorProvider3.SetError(txtTenantEmail, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider3.SetError(txtTenantEmail, string.Empty);
+            }
+            if (string.IsNullOrEmpty(txtTenantPassword.Text))
+            {
+                errorProvider4.SetError(txtTenantPassword, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider4.SetError(txtTenantPassword, string.Empty);
+            }
+            if (string.IsNullOrEmpty(txtTenantNo.Text))
+            {
+                errorProvider5.SetError(txtTenantNo, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider5.SetError(txtTenantNo, string.Empty);
+            }
+            if (string.IsNullOrEmpty(cmbTenantStatus.Text))
+            {
+                errorProvider6.SetError(cmbTenantStatus, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider6.SetError(cmbTenantStatus, string.Empty);
             }
         }
 
@@ -86,7 +145,16 @@ namespace _2022_Final_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            RentalFrm rf = new RentalFrm();
+            rf.Show();
+            this.Hide();
         }
     }
 }

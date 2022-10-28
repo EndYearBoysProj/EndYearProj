@@ -33,6 +33,15 @@ namespace _2022_Final_Project
             {
                 MessageBox.Show("Your information has been added !");
             }
+            if (string.IsNullOrEmpty(cmbPropDescription.Text))
+            {
+                errorProvider1.SetError(cmbPropDescription, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(cmbPropDescription, string.Empty);
+            }
 
         }
 

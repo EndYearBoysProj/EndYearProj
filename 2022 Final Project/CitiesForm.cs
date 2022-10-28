@@ -32,6 +32,24 @@ namespace _2022_Final_Project
             {
                 MessageBox.Show("Your information has been added !");
             }
+            if (string.IsNullOrEmpty(txtDescription.Text))
+            {
+                errorProvider1.SetError(txtDescription, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtDescription, string.Empty);
+            }
+            if (string.IsNullOrEmpty(cmbProvinceID.Text))
+            {
+                errorProvider2.SetError(cmbProvinceID, "Enter recognised values");
+                return;
+            }
+            else
+            {
+                errorProvider2.SetError(cmbProvinceID, string.Empty);
+            }
 
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace _2022_Final_Project
 {
-    partial class RentalReport
+    partial class TenantReport
     {
         /// <summary>
         /// Required designer variable.
@@ -30,8 +30,8 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
-            this.dgvRentalR = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRentalR)).BeginInit();
+            this.dgvTenantRepo = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTenantRepo)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -56,18 +56,19 @@
             this.btnReports.TabIndex = 6;
             this.btnReports.Text = "Display Reports";
             this.btnReports.UseVisualStyleBackColor = false;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
-            // dgvRentalR
+            // dgvTenantRepo
             // 
-            this.dgvRentalR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRentalR.Location = new System.Drawing.Point(12, 22);
-            this.dgvRentalR.Name = "dgvRentalR";
-            this.dgvRentalR.RowHeadersWidth = 51;
-            this.dgvRentalR.RowTemplate.Height = 24;
-            this.dgvRentalR.Size = new System.Drawing.Size(776, 263);
-            this.dgvRentalR.TabIndex = 5;
+            this.dgvTenantRepo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTenantRepo.Location = new System.Drawing.Point(12, 22);
+            this.dgvTenantRepo.Name = "dgvTenantRepo";
+            this.dgvTenantRepo.RowHeadersWidth = 51;
+            this.dgvTenantRepo.RowTemplate.Height = 24;
+            this.dgvTenantRepo.Size = new System.Drawing.Size(776, 263);
+            this.dgvTenantRepo.TabIndex = 5;
             // 
-            // RentalReport
+            // TenantReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -75,10 +76,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnReports);
-            this.Controls.Add(this.dgvRentalR);
-            this.Name = "RentalReport";
-            this.Text = "RentalReport";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRentalR)).EndInit();
+            this.Controls.Add(this.dgvTenantRepo);
+            this.Name = "TenantReport";
+            this.Text = "TenantReport";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTenantRepo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -87,6 +88,6 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnReports;
-        private System.Windows.Forms.DataGridView dgvRentalR;
+        private System.Windows.Forms.DataGridView dgvTenantRepo;
     }
 }

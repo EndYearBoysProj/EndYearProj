@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgencyReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgencyReports.Designer.cs">
+      <DependentUpon>AgencyReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,12 @@
     </Compile>
     <Compile Include="AgentLoginfrm.Designer.cs">
       <DependentUpon>AgentLoginfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgentReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgentReports.Designer.cs">
+      <DependentUpon>AgentReports.cs</DependentUpon>
     </Compile>
     <Compile Include="CitiesForm.cs">
       <SubType>Form</SubType>
@@ -102,6 +114,12 @@
     </Compile>
     <Compile Include="PropertyAgentForm.Designer.cs">
       <DependentUpon>PropertyAgentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyReportcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertyReportcs.Designer.cs">
+      <DependentUpon>PropertyReportcs.cs</DependentUpon>
     </Compile>
     <Compile Include="PropertyTypefrm.cs">
       <SubType>Form</SubType>
@@ -147,12 +165,27 @@
     <Compile Include="RentalReport.Designer.cs">
       <DependentUpon>RentalReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="SuburbReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuburbReports.Designer.cs">
+      <DependentUpon>SuburbReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="TenantFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TenantFrm.Designer.cs">
       <DependentUpon>TenantFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TenantReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TenantReport.Designer.cs">
+      <DependentUpon>TenantReport.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AgencyReports.resx">
+      <DependentUpon>AgencyReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgentForm.resx">
       <DependentUpon>AgentForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgentLoginfrm.resx">
       <DependentUpon>AgentLoginfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgentReports.resx">
+      <DependentUpon>AgentReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CitiesForm.resx">
       <DependentUpon>CitiesForm.cs</DependentUpon>
@@ -176,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PropertyAgentForm.resx">
       <DependentUpon>PropertyAgentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertyReportcs.resx">
+      <DependentUpon>PropertyReportcs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PropertyTypefrm.resx">
       <DependentUpon>PropertyTypefrm.cs</DependentUpon>
@@ -205,8 +244,17 @@
     <EmbeddedResource Include="RentalFrm.resx">
       <DependentUpon>RentalFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RentalReport.resx">
+      <DependentUpon>RentalReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuburbReports.resx">
+      <DependentUpon>SuburbReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TenantFrm.resx">
       <DependentUpon>TenantFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TenantReport.resx">
+      <DependentUpon>TenantReport.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -43,7 +43,10 @@
             this.cmbPropAgentID = new System.Windows.Forms.ComboBox();
             this.cmbTenantID = new System.Windows.Forms.ComboBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.rentalReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRental)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtpEndDate
@@ -62,7 +65,7 @@
             // 
             // txtRentalID
             // 
-            this.txtRentalID.Location = new System.Drawing.Point(212, 26);
+            this.txtRentalID.Location = new System.Drawing.Point(212, 40);
             this.txtRentalID.Name = "txtRentalID";
             this.txtRentalID.Size = new System.Drawing.Size(452, 22);
             this.txtRentalID.TabIndex = 23;
@@ -164,7 +167,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(30, 26);
+            this.label1.Location = new System.Drawing.Point(30, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 24);
             this.label1.TabIndex = 17;
@@ -207,6 +210,24 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rentalReportsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(681, 28);
+            this.menuStrip1.TabIndex = 31;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // rentalReportsToolStripMenuItem
+            // 
+            this.rentalReportsToolStripMenuItem.Name = "rentalReportsToolStripMenuItem";
+            this.rentalReportsToolStripMenuItem.Size = new System.Drawing.Size(120, 24);
+            this.rentalReportsToolStripMenuItem.Text = "Rental Reports";
+            this.rentalReportsToolStripMenuItem.Click += new System.EventHandler(this.rentalReportsToolStripMenuItem_Click);
+            // 
             // RentalFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -228,9 +249,13 @@
             this.Controls.Add(this.btnUpdateRental);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "RentalFrm";
             this.Text = "RentalFrm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvRental)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +278,7 @@
         private System.Windows.Forms.ComboBox cmbPropAgentID;
         private System.Windows.Forms.ComboBox cmbTenantID;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem rentalReportsToolStripMenuItem;
     }
 }

@@ -29,25 +29,9 @@ namespace ProjectForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvAgency = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.moreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.propertyTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.propertyTypeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.propertyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.propertyAgentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.propertyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.suburbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agencyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rawsonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.remaxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.justPropertyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tenantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rentalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmbSuburbID = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,10 +42,17 @@ namespace ProjectForms
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtAgencyName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.agencyReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgency)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -87,135 +78,10 @@ namespace ProjectForms
             this.dgvAgency.TabIndex = 0;
             this.dgvAgency.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgency_CellClick);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.homeToolStripMenuItem,
-            this.moreToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(658, 30);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // homeToolStripMenuItem
-            // 
-            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(78, 26);
-            this.homeToolStripMenuItem.Text = "Home";
-            // 
-            // moreToolStripMenuItem
-            // 
-            this.moreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.propertyTypeToolStripMenuItem,
-            this.propertyToolStripMenuItem,
-            this.cityToolStripMenuItem,
-            this.suburbToolStripMenuItem,
-            this.agencyToolStripMenuItem,
-            this.agentToolStripMenuItem,
-            this.tenantToolStripMenuItem,
-            this.rentalToolStripMenuItem});
-            this.moreToolStripMenuItem.Name = "moreToolStripMenuItem";
-            this.moreToolStripMenuItem.Size = new System.Drawing.Size(71, 26);
-            this.moreToolStripMenuItem.Text = "More";
-            // 
-            // propertyTypeToolStripMenuItem
-            // 
-            this.propertyTypeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.propertyTypeToolStripMenuItem1,
-            this.propertyToolStripMenuItem1,
-            this.propertyAgentToolStripMenuItem});
-            this.propertyTypeToolStripMenuItem.Name = "propertyTypeToolStripMenuItem";
-            this.propertyTypeToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.propertyTypeToolStripMenuItem.Text = "Property";
-            // 
-            // propertyTypeToolStripMenuItem1
-            // 
-            this.propertyTypeToolStripMenuItem1.Name = "propertyTypeToolStripMenuItem1";
-            this.propertyTypeToolStripMenuItem1.Size = new System.Drawing.Size(236, 26);
-            this.propertyTypeToolStripMenuItem1.Text = "Property Type";
-            // 
-            // propertyToolStripMenuItem1
-            // 
-            this.propertyToolStripMenuItem1.Name = "propertyToolStripMenuItem1";
-            this.propertyToolStripMenuItem1.Size = new System.Drawing.Size(236, 26);
-            this.propertyToolStripMenuItem1.Text = "Property";
-            // 
-            // propertyAgentToolStripMenuItem
-            // 
-            this.propertyAgentToolStripMenuItem.Name = "propertyAgentToolStripMenuItem";
-            this.propertyAgentToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
-            this.propertyAgentToolStripMenuItem.Text = "Property Agent";
-            // 
-            // propertyToolStripMenuItem
-            // 
-            this.propertyToolStripMenuItem.Name = "propertyToolStripMenuItem";
-            this.propertyToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.propertyToolStripMenuItem.Text = "Province";
-            // 
-            // cityToolStripMenuItem
-            // 
-            this.cityToolStripMenuItem.Name = "cityToolStripMenuItem";
-            this.cityToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.cityToolStripMenuItem.Text = "City";
-            // 
-            // suburbToolStripMenuItem
-            // 
-            this.suburbToolStripMenuItem.Name = "suburbToolStripMenuItem";
-            this.suburbToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.suburbToolStripMenuItem.Text = "Suburb";
-            // 
-            // agencyToolStripMenuItem
-            // 
-            this.agencyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rawsonToolStripMenuItem,
-            this.remaxToolStripMenuItem,
-            this.justPropertyToolStripMenuItem});
-            this.agencyToolStripMenuItem.Name = "agencyToolStripMenuItem";
-            this.agencyToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.agencyToolStripMenuItem.Text = "Agency";
-            // 
-            // rawsonToolStripMenuItem
-            // 
-            this.rawsonToolStripMenuItem.Name = "rawsonToolStripMenuItem";
-            this.rawsonToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
-            this.rawsonToolStripMenuItem.Text = "Rawson";
-            // 
-            // remaxToolStripMenuItem
-            // 
-            this.remaxToolStripMenuItem.Name = "remaxToolStripMenuItem";
-            this.remaxToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
-            this.remaxToolStripMenuItem.Text = "Remax";
-            // 
-            // justPropertyToolStripMenuItem
-            // 
-            this.justPropertyToolStripMenuItem.Name = "justPropertyToolStripMenuItem";
-            this.justPropertyToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
-            this.justPropertyToolStripMenuItem.Text = "Just Property";
-            // 
-            // agentToolStripMenuItem
-            // 
-            this.agentToolStripMenuItem.Name = "agentToolStripMenuItem";
-            this.agentToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.agentToolStripMenuItem.Text = "Agent";
-            // 
-            // tenantToolStripMenuItem
-            // 
-            this.tenantToolStripMenuItem.Name = "tenantToolStripMenuItem";
-            this.tenantToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.tenantToolStripMenuItem.Text = "Tenant";
-            // 
-            // rentalToolStripMenuItem
-            // 
-            this.rentalToolStripMenuItem.Name = "rentalToolStripMenuItem";
-            this.rentalToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.rentalToolStripMenuItem.Text = "Rental";
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.cmbSuburbID);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txtAgencyID);
@@ -342,6 +208,45 @@ namespace ProjectForms
             this.label1.TabIndex = 0;
             this.label1.Text = "Agency Name";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agencyReportsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(658, 28);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // agencyReportsToolStripMenuItem
+            // 
+            this.agencyReportsToolStripMenuItem.Name = "agencyReportsToolStripMenuItem";
+            this.agencyReportsToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
+            this.agencyReportsToolStripMenuItem.Text = "Agency Reports";
+            this.agencyReportsToolStripMenuItem.Click += new System.EventHandler(this.agencyReportsToolStripMenuItem_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Yellow;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(110, 151);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 30);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
             // frmAgency
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -349,18 +254,21 @@ namespace ProjectForms
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(658, 466);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmAgency";
             this.Text = "frmAgency";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgency)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,23 +278,6 @@ namespace ProjectForms
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvAgency;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem moreToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem propertyTypeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem propertyTypeToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem propertyToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem propertyAgentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem propertyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cityToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem suburbToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agencyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rawsonToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem remaxToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem justPropertyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tenantToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rentalToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnDisplay;
         private System.Windows.Forms.Button btnAdd;
@@ -397,5 +288,10 @@ namespace ProjectForms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbSuburbID;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem agencyReportsToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }
