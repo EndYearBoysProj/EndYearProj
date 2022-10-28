@@ -204,9 +204,6 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAgency.resx">
-      <DependentUpon>frmAgency.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmSuburb.resx">
       <DependentUpon>frmSuburb.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,6 +253,7 @@
     <EmbeddedResource Include="TenantReport.resx">
       <DependentUpon>TenantReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgentHome.cs2" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
