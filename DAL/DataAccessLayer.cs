@@ -279,6 +279,7 @@ namespace DAL
             dbComm.Parameters.AddWithValue("@Surname", age.Surname);
             dbComm.Parameters.AddWithValue("@Email", age.Email);
             dbComm.Parameters.AddWithValue("@Password", age.Password);
+            dbComm.Parameters.AddWithValue("Phone",age.Phone);
             dbComm.Parameters.AddWithValue("@Status", age.Status);
             dbComm.Parameters.AddWithValue("@AgencyID", age.AgencyID);
 
@@ -463,7 +464,7 @@ namespace DAL
             dbComm.CommandType = CommandType.StoredProcedure;
 
 
-            dbComm.Parameters.AddWithValue("@PropertAgentD", ren.PropertyAgentD);
+            dbComm.Parameters.AddWithValue("@PropertyAgentD", ren.PropertyAgentD);
             dbComm.Parameters.AddWithValue("@TenantID", ren.TenantID);
             dbComm.Parameters.AddWithValue("@StartDate", ren.StartDate);
             dbComm.Parameters.AddWithValue("@EndDate", ren.EndDate);

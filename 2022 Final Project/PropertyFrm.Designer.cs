@@ -60,7 +60,7 @@
             this.dgvProperty.RowTemplate.Height = 24;
             this.dgvProperty.Size = new System.Drawing.Size(776, 150);
             this.dgvProperty.TabIndex = 0;
-            this.dgvProperty.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProperty_CellContentClick);
+            this.dgvProperty.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProperty_CellClick);
             // 
             // label1
             // 

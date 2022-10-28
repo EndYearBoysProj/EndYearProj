@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvAgent = new System.Windows.Forms.DataGridView();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -41,43 +41,47 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.cmbAgencyID = new System.Windows.Forms.ComboBox();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtAgentID = new System.Windows.Forms.TextBox();
+            this.btnDisplay = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAgent)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvAgent
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 372);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(522, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvAgent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAgent.Location = new System.Drawing.Point(12, 372);
+            this.dgvAgent.Name = "dgvAgent";
+            this.dgvAgent.RowHeadersWidth = 51;
+            this.dgvAgent.RowTemplate.Height = 24;
+            this.dgvAgent.Size = new System.Drawing.Size(522, 150);
+            this.dgvAgent.TabIndex = 0;
+            this.dgvAgent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgent_CellClick);
+            this.dgvAgent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgent_CellClick);
             // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Yellow;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Location = new System.Drawing.Point(324, 325);
+            this.btnUpdate.Location = new System.Drawing.Point(257, 322);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 25);
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Yellow;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(111, 325);
+            this.btnBack.Location = new System.Drawing.Point(44, 322);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(100, 25);
             this.btnBack.TabIndex = 2;
@@ -89,7 +93,7 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Yellow;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(218, 325);
+            this.btnAdd.Location = new System.Drawing.Point(151, 322);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 25);
             this.btnAdd.TabIndex = 3;
@@ -101,7 +105,7 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Yellow;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(434, 325);
+            this.btnDelete.Location = new System.Drawing.Point(363, 322);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 25);
             this.btnDelete.TabIndex = 4;
@@ -197,63 +201,75 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Name:";
             // 
-            // comboBox1
+            // cmbAgencyID
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(270, 266);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(251, 24);
-            this.comboBox1.TabIndex = 13;
+            this.cmbAgencyID.FormattingEnabled = true;
+            this.cmbAgencyID.Location = new System.Drawing.Point(270, 266);
+            this.cmbAgencyID.Name = "cmbAgencyID";
+            this.cmbAgencyID.Size = new System.Drawing.Size(251, 24);
+            this.cmbAgencyID.TabIndex = 13;
             // 
-            // comboBox2
+            // cmbStatus
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(270, 236);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(251, 24);
-            this.comboBox2.TabIndex = 14;
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Location = new System.Drawing.Point(270, 236);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(251, 24);
+            this.cmbStatus.TabIndex = 14;
             // 
-            // textBox1
+            // txtPhone
             // 
-            this.textBox1.Location = new System.Drawing.Point(270, 203);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(251, 22);
-            this.textBox1.TabIndex = 15;
+            this.txtPhone.Location = new System.Drawing.Point(270, 203);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(251, 22);
+            this.txtPhone.TabIndex = 15;
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(270, 170);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(251, 22);
-            this.textBox2.TabIndex = 16;
+            this.txtPassword.Location = new System.Drawing.Point(270, 170);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(251, 22);
+            this.txtPassword.TabIndex = 16;
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(270, 137);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(251, 22);
-            this.textBox3.TabIndex = 17;
+            this.txtEmail.Location = new System.Drawing.Point(270, 137);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(251, 22);
+            this.txtEmail.TabIndex = 17;
             // 
-            // textBox4
+            // txtSurname
             // 
-            this.textBox4.Location = new System.Drawing.Point(270, 104);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(251, 22);
-            this.textBox4.TabIndex = 18;
+            this.txtSurname.Location = new System.Drawing.Point(270, 104);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(251, 22);
+            this.txtSurname.TabIndex = 18;
             // 
-            // textBox5
+            // txtName
             // 
-            this.textBox5.Location = new System.Drawing.Point(270, 71);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(251, 22);
-            this.textBox5.TabIndex = 19;
+            this.txtName.Location = new System.Drawing.Point(270, 71);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(251, 22);
+            this.txtName.TabIndex = 19;
             // 
-            // textBox6
+            // txtAgentID
             // 
-            this.textBox6.Location = new System.Drawing.Point(270, 35);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(251, 22);
-            this.textBox6.TabIndex = 20;
+            this.txtAgentID.Location = new System.Drawing.Point(270, 35);
+            this.txtAgentID.Name = "txtAgentID";
+            this.txtAgentID.Size = new System.Drawing.Size(251, 22);
+            this.txtAgentID.TabIndex = 20;
+            // 
+            // btnDisplay
+            // 
+            this.btnDisplay.BackColor = System.Drawing.Color.Yellow;
+            this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDisplay.Location = new System.Drawing.Point(469, 322);
+            this.btnDisplay.Name = "btnDisplay";
+            this.btnDisplay.Size = new System.Drawing.Size(100, 25);
+            this.btnDisplay.TabIndex = 21;
+            this.btnDisplay.Text = "Display";
+            this.btnDisplay.UseVisualStyleBackColor = false;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
             // AgentForm
             // 
@@ -261,14 +277,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(592, 538);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnDisplay);
+            this.Controls.Add(this.txtAgentID);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtSurname);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.cmbStatus);
+            this.Controls.Add(this.cmbAgencyID);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -281,10 +298,11 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvAgent);
             this.Name = "AgentForm";
             this.Text = "AgentForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.AgentForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAgent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,7 +310,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvAgent;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnAdd;
@@ -305,13 +323,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ComboBox cmbAgencyID;
+        private System.Windows.Forms.ComboBox cmbStatus;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtAgentID;
+        private System.Windows.Forms.Button btnDisplay;
     }
 }

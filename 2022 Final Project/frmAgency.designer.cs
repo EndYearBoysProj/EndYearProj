@@ -49,6 +49,8 @@ namespace ProjectForms
             this.tenantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rentalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmbSuburbID = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtAgencyID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -56,8 +58,6 @@ namespace ProjectForms
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtAgencyName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbSuburbID = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgency)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -85,6 +85,7 @@ namespace ProjectForms
             this.dgvAgency.RowHeadersWidth = 51;
             this.dgvAgency.Size = new System.Drawing.Size(604, 137);
             this.dgvAgency.TabIndex = 0;
+            this.dgvAgency.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgency_CellClick);
             // 
             // menuStrip1
             // 
@@ -233,6 +234,36 @@ namespace ProjectForms
             this.groupBox2.Text = "Agency";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // cmbSuburbID
+            // 
+            this.cmbSuburbID.FormattingEnabled = true;
+            this.cmbSuburbID.Items.AddRange(new object[] {
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17"});
+            this.cmbSuburbID.Location = new System.Drawing.Point(175, 112);
+            this.cmbSuburbID.Name = "cmbSuburbID";
+            this.cmbSuburbID.Size = new System.Drawing.Size(247, 31);
+            this.cmbSuburbID.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(26, 113);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 24);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Suburb ID:";
+            // 
             // txtAgencyID
             // 
             this.txtAgencyID.Enabled = false;
@@ -310,25 +341,6 @@ namespace ProjectForms
             this.label1.Size = new System.Drawing.Size(123, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Agency Name";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(26, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 24);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Suburb ID:";
-            // 
-            // cmbSuburbID
-            // 
-            this.cmbSuburbID.FormattingEnabled = true;
-            this.cmbSuburbID.Location = new System.Drawing.Point(175, 112);
-            this.cmbSuburbID.Name = "cmbSuburbID";
-            this.cmbSuburbID.Size = new System.Drawing.Size(247, 31);
-            this.cmbSuburbID.TabIndex = 8;
             // 
             // frmAgency
             // 

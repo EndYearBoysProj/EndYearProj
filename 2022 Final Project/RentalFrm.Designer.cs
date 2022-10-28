@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbPropAgentID = new System.Windows.Forms.ComboBox();
             this.cmbTenantID = new System.Windows.Forms.ComboBox();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRental)).BeginInit();
             this.SuspendLayout();
             // 
@@ -172,6 +173,11 @@
             // cmbPropAgentID
             // 
             this.cmbPropAgentID.FormattingEnabled = true;
+            this.cmbPropAgentID.Items.AddRange(new object[] {
+            "2",
+            "4",
+            "5",
+            "6"});
             this.cmbPropAgentID.Location = new System.Drawing.Point(212, 77);
             this.cmbPropAgentID.Name = "cmbPropAgentID";
             this.cmbPropAgentID.Size = new System.Drawing.Size(449, 24);
@@ -180,10 +186,26 @@
             // cmbTenantID
             // 
             this.cmbTenantID.FormattingEnabled = true;
+            this.cmbTenantID.Items.AddRange(new object[] {
+            "1016",
+            "1017",
+            "1018"});
             this.cmbTenantID.Location = new System.Drawing.Point(212, 125);
             this.cmbTenantID.Name = "cmbTenantID";
             this.cmbTenantID.Size = new System.Drawing.Size(449, 24);
             this.cmbTenantID.TabIndex = 29;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Yellow;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(12, 246);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(150, 40);
+            this.btnBack.TabIndex = 30;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // RentalFrm
             // 
@@ -191,6 +213,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(681, 450);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.cmbTenantID);
             this.Controls.Add(this.cmbPropAgentID);
             this.Controls.Add(this.dtpEndDate);
@@ -229,5 +252,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbPropAgentID;
         private System.Windows.Forms.ComboBox cmbTenantID;
+        private System.Windows.Forms.Button btnBack;
     }
 }

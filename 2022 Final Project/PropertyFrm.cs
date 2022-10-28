@@ -91,18 +91,13 @@ namespace _2022_Final_Project
 
         }
 
-        private void dgvProperty_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        
+
+        
+
+        private void dgvProperty_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvProperty.SelectedRows.Count > 0)
-            {
-                txtPropertyID.Text = dgvProperty.SelectedRows[0].Cells["PropertyID"].Value.ToString();
-                txtDescription.Text = dgvProperty.SelectedRows[0].Cells["Description"].Value.ToString();
-                txtPrice.Text = dgvProperty.SelectedRows[0].Cells["Price"].Value.ToString();
-                txtImage.Text = dgvProperty.SelectedRows[0].Cells["Image"].Value.ToString();
-                cmbPropertyTypeID.Text = dgvProperty.SelectedRows[0].Cells["PropertyTypeID"].Value.ToString();
-                cmbStatus.Text = dgvProperty.SelectedRows[0].Cells["Status"].Value.ToString();
-                cmbSuburbsID.Text = dgvProperty.SelectedRows[0].Cells["SuburbsID"].Value.ToString();
-            }
+            txtPropertyID.Text = dgvProperty.SelectedRows[0].Cells["PropertyID"].Value.ToString();
         }
     }
 }

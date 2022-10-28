@@ -12,7 +12,7 @@ namespace DAL
 {
     public class Agent
     {
-        Agent age = new Agent();
+        
         public int AgentID { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }

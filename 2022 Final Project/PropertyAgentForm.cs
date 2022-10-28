@@ -82,5 +82,12 @@ namespace _2022_Final_Project
 
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            AgentHome aa = new AgentHome();
+            aa.Show();
+            this.Hide();
+        }
     }
 }

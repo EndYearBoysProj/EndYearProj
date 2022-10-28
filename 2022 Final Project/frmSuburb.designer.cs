@@ -157,6 +157,17 @@
             // cmbCityID
             // 
             this.cmbCityID.FormattingEnabled = true;
+            this.cmbCityID.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
             this.cmbCityID.Location = new System.Drawing.Point(260, 138);
             this.cmbCityID.Name = "cmbCityID";
             this.cmbCityID.Size = new System.Drawing.Size(274, 24);

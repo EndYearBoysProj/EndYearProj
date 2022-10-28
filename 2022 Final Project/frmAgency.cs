@@ -25,6 +25,7 @@ namespace ProjectForms
             Agency agency = new Agency();
 
             agency.AgencyName = txtAgencyName.Text;
+            agency.SuburbID = int.Parse(cmbSuburbID.Text);
 
             int x = bll.InsertAgency(agency);
 
@@ -56,6 +57,11 @@ namespace ProjectForms
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvAgency_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtAgencyID.Text = dgvAgency.SelectedRows[0].Cells["AgencyID"].Value.ToString();
         }
     }
 }

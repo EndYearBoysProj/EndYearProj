@@ -83,5 +83,10 @@ namespace _2022_Final_Project
         {
             txtID.Text = dgvTenant.SelectedRows[0].Cells["TenantID"].Value.ToString();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
